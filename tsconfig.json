@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react",
+
+    "sourceMap": true,
+    "strict": true,
+
+    "moduleResolution": "node",
+
+    "baseUrl": "./src",
+
+    "paths": {
+      "js/*": ["./src/js/*"]
+    },
+
+    "typeRoots": ["node_modules/@types"],
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+
+    // "types": ["node"]
+  },
+  "include": ["src/**/*"]
+}

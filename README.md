@@ -4,14 +4,18 @@ A barebones cryptocurrency price tracker powered by CoinGecko API. Makes use of 
 
 ## Running development server
 
-`npm install`
+### `npm install`
+
 Install the dependencies
 
-`npm run dev`
+### `npm run dev`
+
 Run development server, localhost:1234 will be served automatically by `parcel`
 
-`npm run test`
+### `npm run test`
+
 Run typescript checks
 
-`npm run build`
+### `npm run build`
+
 Build production files

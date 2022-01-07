@@ -1,3 +1,5 @@
+import 'css/main.css';
+
 import React, { FC } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

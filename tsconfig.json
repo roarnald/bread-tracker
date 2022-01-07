@@ -13,7 +13,7 @@
     "baseUrl": "./src",
 
     "paths": {
-      "js/*": ["./src/js/*"]
+      "@/*": ["./*"],
     },
 
     "typeRoots": ["node_modules/@types"],

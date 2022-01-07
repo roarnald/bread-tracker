@@ -13,7 +13,6 @@
     "baseUrl": "./src",
 
     "paths": {
-      "@/*": ["./*"],
     },
 
     "typeRoots": ["node_modules/@types"],

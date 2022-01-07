@@ -31,6 +31,7 @@
   },
   "alias": {
     "css": "./src/css",
+    "contexts": "./src/contexts",
     "utils": "./src/utils"
   }
 }

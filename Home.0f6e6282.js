@@ -676,7 +676,7 @@ $RefreshReg$(_c3, "TypewriterHeaderWrapper");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","styled-components":"dOPCJ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","contexts/Home":"d1Rfi","utils/ProviderHOC":"bPUxl"}],"dOPCJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","styled-components":"dOPCJ","contexts/Home":"d1Rfi","utils/ProviderHOC":"bPUxl","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"dOPCJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ServerStyleSheet", ()=>Je

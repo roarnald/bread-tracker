@@ -6,14 +6,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import lazy from 'utils/lazy';
 
-const Home = lazy(() => import('./components/Home'));
+const Home = lazy(() => import('./Home'));
 
 const Application: FC = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/">
-        <Route index element={<Home />} />
-      </Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/bread-tracker" element={<Home />} />
     </Routes>
   </BrowserRouter>
 );

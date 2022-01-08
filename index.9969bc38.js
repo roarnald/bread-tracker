@@ -1016,25 +1016,28 @@ const Home = _lazyDefault.default(_c = ()=>require("3ad64ff63ae6cc3f")
 );
 _c1 = Home;
 const Application = ()=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
-        basename: "/bread-tracker",
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
-            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                path: "/",
-                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                    index: true,
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "/",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
+                    }, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "src/components/index.tsx",
+                    lineNumber: 14,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "/bread-tracker",
                     element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/components/index.tsx",
                     lineNumber: 15,
-                    columnNumber: 9
+                    columnNumber: 7
                 }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/index.tsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined)
-        }, void 0, false, {
+            ]
+        }, void 0, true, {
             fileName: "src/components/index.tsx",
             lineNumber: 13,
             columnNumber: 5
@@ -1049,7 +1052,7 @@ _c2 = Application;
 _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Application, {
 }, void 0, false, {
     fileName: "src/components/index.tsx",
-    lineNumber: 21,
+    lineNumber: 20,
     columnNumber: 8
 }, undefined), document.getElementById('root'));
 var _c, _c1, _c2;

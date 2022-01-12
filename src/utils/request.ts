@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosInstance } from 'axios';
+import { toast } from 'react-toastify';
 
 interface IRequestFunction {
   <T = never>(url: string, config?: AxiosRequestConfig): Promise<T>;
@@ -17,9 +18,12 @@ class Request {
   });
 
   constructor() {
-    this.instance.interceptors.response.use(({ data }) => {
-      return { message: data.debugMessage, ...data };
-    });
+    this.instance.interceptors.response.use(
+      ({ data }) => {
+        return data;
+      },
+      (error) => toast.error(JSON.stringify(error)),
+    );
   }
 
   // Axios Methods

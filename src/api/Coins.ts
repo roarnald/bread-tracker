@@ -1,6 +1,6 @@
 import request from '~/src/utils/request';
 
-interface ICoinItem {
+export interface ICoinItem {
   id: string;
   name: string;
   symbol: string;

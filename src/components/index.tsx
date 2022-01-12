@@ -1,10 +1,10 @@
-import 'css/main.css';
+import '../css/main.css';
 
 import React, { FC } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-import lazy from 'utils/lazy';
+import lazy from '~/src/utils/lazy';
 
 const Home = lazy(() => import('./Home'));
 

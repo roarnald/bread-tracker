@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { HomeProvider, useHome } from 'contexts/Home';
-import { withProvider } from 'utils/ProviderHOC';
+import { HomeProvider, useHome } from '~/src/contexts/Home';
+import { withProvider } from '~/src/utils/ProviderHOC';
+import HomeTokenList from './HomeTokenList';
 
 const Home: React.FC = () => {
   const {} = useHome();
@@ -19,7 +20,7 @@ const Home: React.FC = () => {
               </p>
             </TypewriterHeaderWrapper>
 
-            <input className="outline-neutral-600 border-2 my-6 rounded-full px-5 py-2 w-2/5" />
+            <HomeSearchBar className="outline-neutral-600 border-2 my-6 rounded-full px-5 py-2 w-2/5" />
           </div>
 
           <div className="mt-10">
@@ -27,6 +28,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <HomeTokenList />
     </HomeContainer>
   );
 };
@@ -64,5 +67,11 @@ const TypewriterHeaderWrapper = styled.span`
         border-color: indigo;
       }
     }
+  }
+`;
+
+const HomeSearchBar = styled.input`
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 `;

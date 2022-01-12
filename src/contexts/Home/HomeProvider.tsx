@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { getCoinList } from '~/src/api/Coins';
 import { HomeContext, IHomeContext, initValue } from './HomeContext';
 
 interface IHomeProviderProps {}
@@ -14,9 +16,14 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
     };
   }
 
+  componentDidMount() {
+    this.fetchData();
+  }
+
   fetchData = async () => {
     try {
       this.setState({ isFetching: true });
+      const result = await getCoinList();
     } finally {
       this.setState({ isFetching: false });
     }

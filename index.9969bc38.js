@@ -1005,54 +1005,77 @@ $parcel$ReactRefreshHelpers$0443.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _mainCss = require("css/main.css");
+var _mainCss = require("../css/main.css");
+var _reactToastifyCss = require("react-toastify/dist/ReactToastify.css");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactRouterDom = require("react-router-dom");
-var _lazy = require("utils/lazy");
+var _reactToastify = require("react-toastify");
+var _lazy = require("~/src/utils/lazy");
 var _lazyDefault = parcelHelpers.interopDefault(_lazy);
 const Home = _lazyDefault.default(_c = ()=>require("3ad64ff63ae6cc3f")
 );
 _c1 = Home;
-const Application = ()=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                    path: "/",
-                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
-                    }, void 0, false, void 0, void 0)
-                }, void 0, false, {
+const Application = ()=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
+                basename: "/",
+                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                            path: "/bread-tracker",
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                                index: true,
+                                element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
+                                }, void 0, false, void 0, void 0)
+                            }, void 0, false, {
+                                fileName: "src/components/index.tsx",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/index.tsx",
+                            lineNumber: 17,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                            path: "*",
+                            element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Navigate, {
+                                replace: true,
+                                to: "/bread-tracker"
+                            }, void 0, false, void 0, void 0)
+                        }, void 0, false, {
+                            fileName: "src/components/index.tsx",
+                            lineNumber: 21,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/components/index.tsx",
-                    lineNumber: 14,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                    path: "/bread-tracker",
-                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(Home, {
-                    }, void 0, false, void 0, void 0)
-                }, void 0, false, {
-                    fileName: "src/components/index.tsx",
-                    lineNumber: 15,
+                    lineNumber: 16,
                     columnNumber: 7
                 }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/index.tsx",
-            lineNumber: 13,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/index.tsx",
-        lineNumber: 12,
-        columnNumber: 3
-    }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/index.tsx",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactToastify.ToastContainer, {
+                position: "top-center"
+            }, void 0, false, {
+                fileName: "src/components/index.tsx",
+                lineNumber: 25,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true)
 ;
 _c2 = Application;
 _reactDom.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(Application, {
 }, void 0, false, {
     fileName: "src/components/index.tsx",
-    lineNumber: 20,
+    lineNumber: 29,
     columnNumber: 8
 }, undefined), document.getElementById('root'));
 var _c, _c1, _c2;
@@ -1065,7 +1088,7 @@ $RefreshReg$(_c2, "Application");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"3jZUD","css/main.css":"2lMZK","react":"4mchR","react-dom":"afyCw","react-router-dom":"16kZP","utils/lazy":"9z36M","3ad64ff63ae6cc3f":"3XDxv","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"3jZUD":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","react-dom":"afyCw","react-router-dom":"16kZP","3ad64ff63ae6cc3f":"3XDxv","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","~/src/utils/lazy":"9z36M","../css/main.css":"2lMZK","react-toastify/dist/ReactToastify.css":"ZJDLk","react-toastify":"24XKh"}],"3jZUD":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -3521,7 +3544,7 @@ module.exports = shouldUseNative() ? Object.assign : function(target, source) {
     return to;
 };
 
-},{}],"2lMZK":[function() {},{}],"afyCw":[function(require,module,exports) {
+},{}],"afyCw":[function(require,module,exports) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
@@ -24531,45 +24554,110 @@ const normalizeSearch = (search)=>!search || search === "?" ? "" : search.starts
 const normalizeHash = (hash)=>!hash || hash === "#" ? "" : hash.startsWith("#") ? hash : "#" + hash
 ; ///////////////////////////////////////////////////////////////////////////////
 
-},{"react":"4mchR","history":"2DMpe","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"9z36M":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$6b51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6b51.prelude(module);
+},{"react":"4mchR","history":"2DMpe","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"3XDxv":[function(require,module,exports) {
+module.exports = require("./helpers/browser/js-loader")(require('./helpers/bundle-url').getBundleURL('hq8YB') + "Home.0f6e6282.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root('gl5nN')
+);
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-function lazy(loader, loading = null) {
-    const LazyComponent = /*#__PURE__*/ _reactDefault.default.lazy(loader);
-    const SuspenseComponent = (props)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactDefault.default.Suspense, {
-            fallback: loading,
-            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(LazyComponent, {
-                ...props
-            }, void 0, false, {
-                fileName: "src/utils/lazy.tsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this)
-        }, void 0, false, {
-            fileName: "src/utils/lazy.tsx",
-            lineNumber: 11,
-            columnNumber: 5
-        }, this)
-    ;
-    return SuspenseComponent;
-}
-exports.default = lazy;
+},{"./helpers/browser/js-loader":"285qT","./helpers/bundle-url":"chiK4"}],"285qT":[function(require,module,exports) {
+"use strict";
+var cacheLoader = require('../cacheLoader');
+module.exports = cacheLoader(function(bundle) {
+    return new Promise(function(resolve, reject) {
+        // Don't insert the same script twice (e.g. if it was already in the HTML)
+        var existingScripts = document.getElementsByTagName('script');
+        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
+            return script.src === bundle;
+        })) {
+            resolve();
+            return;
+        }
+        var script1 = document.createElement('script');
+        script1.async = true;
+        script1.type = 'text/javascript';
+        script1.charset = 'utf-8';
+        script1.src = bundle;
+        script1.onerror = function(e) {
+            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
+            script1.onerror = script1.onload = null;
+            script1.remove();
+            reject(error);
+        };
+        script1.onload = function() {
+            script1.onerror = script1.onload = null;
+            resolve();
+        };
+        document.getElementsByTagName('head')[0].appendChild(script1);
+    });
+});
 
-  $parcel$ReactRefreshHelpers$6b51.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
+},{"../cacheLoader":"7AHIJ"}],"7AHIJ":[function(require,module,exports) {
+"use strict";
+var cachedBundles = {
+};
+var cachedPreloads = {
+};
+var cachedPrefetches = {
+};
+function getCache(type) {
+    switch(type){
+        case 'preload':
+            return cachedPreloads;
+        case 'prefetch':
+            return cachedPrefetches;
+        default:
+            return cachedBundles;
+    }
 }
-},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"9pz13":[function(require,module,exports) {
+module.exports = function(loader, type) {
+    return function(bundle) {
+        var cache = getCache(type);
+        if (cache[bundle]) return cache[bundle];
+        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
+            delete cache[bundle];
+            throw e;
+        });
+    };
+};
+
+},{}],"chiK4":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"9pz13":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -24689,109 +24777,1125 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"aeH4U"}],"3XDxv":[function(require,module,exports) {
-module.exports = require("./helpers/browser/js-loader")(require('./helpers/bundle-url').getBundleURL('hq8YB') + "Home.0f6e6282.js" + "?" + Date.now()).catch((err)=>{
-    delete module.bundle.cache[module.id];
-    throw err;
-}).then(()=>module.bundle.root('gl5nN')
+},{"react-refresh/runtime":"aeH4U"}],"9z36M":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6b51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6b51.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function lazy(loader, loading = null) {
+    const LazyComponent = /*#__PURE__*/ _reactDefault.default.lazy(loader);
+    const SuspenseComponent = (props)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactDefault.default.Suspense, {
+            fallback: loading,
+            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(LazyComponent, {
+                ...props
+            }, void 0, false, {
+                fileName: "src/utils/lazy.tsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this)
+        }, void 0, false, {
+            fileName: "src/utils/lazy.tsx",
+            lineNumber: 11,
+            columnNumber: 5
+        }, this)
+    ;
+    return SuspenseComponent;
+}
+exports.default = lazy;
+
+  $parcel$ReactRefreshHelpers$6b51.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"2lMZK":[function() {},{}],"ZJDLk":[function() {},{}],"24XKh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Bounce", ()=>Bounce
 );
-
-},{"./helpers/browser/js-loader":"285qT","./helpers/bundle-url":"chiK4"}],"285qT":[function(require,module,exports) {
-"use strict";
-var cacheLoader = require('../cacheLoader');
-module.exports = cacheLoader(function(bundle) {
-    return new Promise(function(resolve, reject) {
-        // Don't insert the same script twice (e.g. if it was already in the HTML)
-        var existingScripts = document.getElementsByTagName('script');
-        if ([].concat(existingScripts).some(function isCurrentBundle(script) {
-            return script.src === bundle;
-        })) {
-            resolve();
-            return;
+parcelHelpers.export(exports, "Flip", ()=>Flip
+);
+parcelHelpers.export(exports, "Icons", ()=>Icons
+);
+parcelHelpers.export(exports, "Slide", ()=>Slide
+);
+parcelHelpers.export(exports, "ToastContainer", ()=>ToastContainer
+);
+parcelHelpers.export(exports, "Zoom", ()=>Zoom
+);
+parcelHelpers.export(exports, "collapseToast", ()=>collapseToast
+);
+parcelHelpers.export(exports, "cssTransition", ()=>cssTransition
+);
+parcelHelpers.export(exports, "toast", ()=>toast
+);
+parcelHelpers.export(exports, "useToast", ()=>useToast
+);
+parcelHelpers.export(exports, "useToastContainer", ()=>useToastContainer
+);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _reactDom = require("react-dom");
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
         }
-        var script1 = document.createElement('script');
-        script1.async = true;
-        script1.type = 'text/javascript';
-        script1.charset = 'utf-8';
-        script1.src = bundle;
-        script1.onerror = function(e) {
-            var error = new TypeError("Failed to fetch dynamically imported module: ".concat(bundle, ". Error: ").concat(e.message));
-            script1.onerror = script1.onload = null;
-            script1.remove();
-            reject(error);
-        };
-        script1.onload = function() {
-            script1.onerror = script1.onload = null;
-            resolve();
-        };
-        document.getElementsByTagName('head')[0].appendChild(script1);
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+function isNum(v) {
+    return typeof v === 'number' && !isNaN(v);
+}
+function isBool(v) {
+    return typeof v === 'boolean';
+}
+function isStr(v) {
+    return typeof v === 'string';
+}
+function isFn(v) {
+    return typeof v === 'function';
+}
+function parseClassName(v) {
+    return isStr(v) || isFn(v) ? v : null;
+}
+function isToastIdValid(toastId) {
+    return toastId === 0 || toastId;
+}
+function getAutoCloseDelay(toastAutoClose, containerAutoClose) {
+    return toastAutoClose === false || isNum(toastAutoClose) && toastAutoClose > 0 ? toastAutoClose : containerAutoClose;
+}
+var canUseDom = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+function canBeRendered(content) {
+    return _react.isValidElement(content) || isStr(content) || isFn(content) || isNum(content);
+}
+var POSITION = {
+    TOP_LEFT: 'top-left',
+    TOP_RIGHT: 'top-right',
+    TOP_CENTER: 'top-center',
+    BOTTOM_LEFT: 'bottom-left',
+    BOTTOM_RIGHT: 'bottom-right',
+    BOTTOM_CENTER: 'bottom-center'
+};
+var TYPE = {
+    INFO: 'info',
+    SUCCESS: 'success',
+    WARNING: 'warning',
+    ERROR: 'error',
+    DEFAULT: 'default'
+};
+/**
+ * Used to collapse toast after exit animation
+ */ function collapseToast(node, done, duration) {
+    if (duration === void 0) duration = 300;
+    var scrollHeight = node.scrollHeight, style = node.style;
+    requestAnimationFrame(function() {
+        style.minHeight = 'initial';
+        style.height = scrollHeight + 'px';
+        style.transition = "all " + duration + "ms";
+        requestAnimationFrame(function() {
+            style.height = '0';
+            style.padding = '0';
+            style.margin = '0';
+            setTimeout(done, duration);
+        });
     });
-});
-
-},{"../cacheLoader":"7AHIJ"}],"7AHIJ":[function(require,module,exports) {
-"use strict";
-var cachedBundles = {
+}
+/**
+ * Css animation that just work.
+ * You could use animate.css for instance
+ *
+ *
+ * ```
+ * cssTransition({
+ *   enter: "animate__animated animate__bounceIn",
+ *   exit: "animate__animated animate__bounceOut"
+ * })
+ * ```
+ *
+ */ function cssTransition(_ref) {
+    var enter = _ref.enter, exit = _ref.exit, _ref$appendPosition = _ref.appendPosition, appendPosition = _ref$appendPosition === void 0 ? false : _ref$appendPosition, _ref$collapse = _ref.collapse, collapse = _ref$collapse === void 0 ? true : _ref$collapse, _ref$collapseDuration = _ref.collapseDuration, collapseDuration = _ref$collapseDuration === void 0 ? 300 : _ref$collapseDuration;
+    return function ToastTransition(_ref2) {
+        var children = _ref2.children, position = _ref2.position, preventExitTransition = _ref2.preventExitTransition, done = _ref2.done, nodeRef = _ref2.nodeRef, isIn = _ref2.isIn;
+        var enterClassName = appendPosition ? enter + "--" + position : enter;
+        var exitClassName = appendPosition ? exit + "--" + position : exit;
+        var baseClassName = _react.useRef();
+        var animationStep = _react.useRef(0);
+        _react.useLayoutEffect(function() {
+            onEnter();
+        }, []);
+        _react.useEffect(function() {
+            if (!isIn) preventExitTransition ? onExited() : onExit();
+        }, [
+            isIn
+        ]);
+        function onEnter() {
+            var node = nodeRef.current;
+            baseClassName.current = node.className;
+            node.className += " " + enterClassName;
+            node.addEventListener('animationend', onEntered);
+        }
+        function onEntered(e) {
+            if (e.target !== nodeRef.current) return;
+            var node = nodeRef.current;
+            node.removeEventListener('animationend', onEntered);
+            if (animationStep.current === 0) node.className = baseClassName.current;
+        }
+        function onExit() {
+            animationStep.current = 1;
+            var node = nodeRef.current;
+            node.className += " " + exitClassName;
+            node.addEventListener('animationend', onExited);
+        }
+        function onExited() {
+            var node = nodeRef.current;
+            node.removeEventListener('animationend', onExited);
+            collapse ? collapseToast(node, done, collapseDuration) : done();
+        }
+        return _reactDefault.default.createElement(_reactDefault.default.Fragment, null, children);
+    };
+}
+var eventManager = {
+    list: /*#__PURE__*/ new Map(),
+    emitQueue: /*#__PURE__*/ new Map(),
+    on: function on(event, callback) {
+        this.list.has(event) || this.list.set(event, []);
+        this.list.get(event).push(callback);
+        return this;
+    },
+    off: function off(event, callback) {
+        if (callback) {
+            var cb1 = this.list.get(event).filter(function(cb) {
+                return cb !== callback;
+            });
+            this.list.set(event, cb1);
+            return this;
+        }
+        this.list["delete"](event);
+        return this;
+    },
+    cancelEmit: function cancelEmit(event) {
+        var timers = this.emitQueue.get(event);
+        if (timers) {
+            timers.forEach(clearTimeout);
+            this.emitQueue["delete"](event);
+        }
+        return this;
+    },
+    /**
+   * Enqueue the event at the end of the call stack
+   * Doing so let the user call toast as follow:
+   * toast('1')
+   * toast('2')
+   * toast('3')
+   * Without setTimemout the code above will not work
+   */ emit: function emit(event) {
+        var _this = this;
+        for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++)args[_key - 1] = arguments[_key];
+        this.list.has(event) && this.list.get(event).forEach(function(callback) {
+            var timer = setTimeout(function() {
+                // @ts-ignore
+                callback.apply(void 0, args);
+            }, 0);
+            _this.emitQueue.has(event) || _this.emitQueue.set(event, []);
+            _this.emitQueue.get(event).push(timer);
+        });
+    }
 };
-var cachedPreloads = {
-};
-var cachedPrefetches = {
-};
-function getCache(type) {
-    switch(type){
-        case 'preload':
-            return cachedPreloads;
-        case 'prefetch':
-            return cachedPrefetches;
-        default:
-            return cachedBundles;
+/**
+ * `useKeeper` is a helper around `useRef`.
+ *
+ * You don't need to access the `.current`property to get the value
+ * If refresh is set to true. The ref will be updated every render
+ */ function useKeeper(arg, refresh) {
+    if (refresh === void 0) refresh = false;
+    var ref = _react.useRef(arg);
+    _react.useEffect(function() {
+        if (refresh) ref.current = arg;
+    });
+    return ref.current;
+}
+function reducer(state, action) {
+    switch(action.type){
+        case 0:
+            return [].concat(state, [
+                action.toastId
+            ]).filter(function(id) {
+                return id !== action.staleId;
+            });
+        case 1:
+            return isToastIdValid(action.toastId) ? state.filter(function(id) {
+                return id !== action.toastId;
+            }) : [];
     }
 }
-module.exports = function(loader, type) {
-    return function(bundle) {
-        var cache = getCache(type);
-        if (cache[bundle]) return cache[bundle];
-        return cache[bundle] = loader.apply(null, arguments).catch(function(e) {
-            delete cache[bundle];
-            throw e;
+var _excluded = [
+    "delay",
+    "staleId"
+];
+function useToastContainer(props1) {
+    var _useReducer = _react.useReducer(function(x) {
+        return x + 1;
+    }, 0), forceUpdate = _useReducer[1];
+    var _useReducer2 = _react.useReducer(reducer, []), toast1 = _useReducer2[0], dispatch = _useReducer2[1];
+    var containerRef = _react.useRef(null);
+    var toastCount = useKeeper(0);
+    var queue1 = useKeeper([]);
+    var collection = useKeeper({
+    });
+    var instance = useKeeper({
+        toastKey: 1,
+        displayedToast: 0,
+        props: props1,
+        containerId: null,
+        isToastActive: isToastActive,
+        getToast: function getToast(id) {
+            return collection[id] || null;
+        }
+    });
+    _react.useEffect(function() {
+        instance.containerId = props1.containerId;
+        eventManager.cancelEmit(3).on(0, buildToast).on(1, function(toastId) {
+            return containerRef.current && removeToast(toastId);
+        }).on(5, clearWaitingQueue).emit(2, instance);
+        return function() {
+            return eventManager.emit(3, instance);
+        };
+    }, []);
+    _react.useEffect(function() {
+        instance.isToastActive = isToastActive;
+        instance.displayedToast = toast1.length;
+        eventManager.emit(4, toast1.length, props1.containerId);
+    }, [
+        toast1
+    ]);
+    _react.useEffect(function() {
+        instance.props = props1;
+    });
+    function isToastActive(id) {
+        return toast1.indexOf(id) !== -1;
+    }
+    function clearWaitingQueue(_ref) {
+        var containerId = _ref.containerId;
+        var limit = instance.props.limit;
+        if (limit && (!containerId || instance.containerId === containerId)) {
+            toastCount -= queue1.length;
+            queue1 = [];
+        }
+    }
+    function removeToast(toastId) {
+        dispatch({
+            type: 1,
+            toastId: toastId
         });
+    }
+    function dequeueToast() {
+        var _queue$shift = queue1.shift(), toastContent = _queue$shift.toastContent, toastProps = _queue$shift.toastProps, staleId = _queue$shift.staleId;
+        appendToast(toastContent, toastProps, staleId);
+    }
+    /**
+   * check if a container is attached to the dom
+   * check for multi-container, build only if associated
+   * check for duplicate toastId if no update
+   */ function isNotValid(_ref2) {
+        var containerId = _ref2.containerId, toastId = _ref2.toastId, updateId = _ref2.updateId;
+        return !containerRef.current || instance.props.enableMultiContainer && containerId !== instance.props.containerId || collection[toastId] && updateId == null ? true : false;
+    } // this function and all the function called inside needs to rely on ref(`useKeeper`)
+    function buildToast(content, _ref3) {
+        var _options$icon;
+        var delay = _ref3.delay, staleId = _ref3.staleId, options = _objectWithoutPropertiesLoose(_ref3, _excluded);
+        if (!canBeRendered(content) || isNotValid(options)) return;
+        var toastId = options.toastId, updateId = options.updateId, data = options.data;
+        var props = instance.props;
+        var closeToast = function closeToast() {
+            return removeToast(toastId);
+        };
+        var isNotAnUpdate = options.updateId == null;
+        if (isNotAnUpdate) toastCount++;
+        var toastProps = {
+            toastId: toastId,
+            updateId: updateId,
+            isLoading: options.isLoading,
+            theme: options.theme || props.theme,
+            icon: (_options$icon = options.icon) != null ? _options$icon : props.icon,
+            isIn: false,
+            key: options.key || instance.toastKey++,
+            type: options.type,
+            closeToast: closeToast,
+            closeButton: options.closeButton,
+            rtl: props.rtl,
+            position: options.position || props.position,
+            transition: options.transition || props.transition,
+            className: parseClassName(options.className || props.toastClassName),
+            bodyClassName: parseClassName(options.bodyClassName || props.bodyClassName),
+            style: options.style || props.toastStyle,
+            bodyStyle: options.bodyStyle || props.bodyStyle,
+            onClick: options.onClick || props.onClick,
+            pauseOnHover: isBool(options.pauseOnHover) ? options.pauseOnHover : props.pauseOnHover,
+            pauseOnFocusLoss: isBool(options.pauseOnFocusLoss) ? options.pauseOnFocusLoss : props.pauseOnFocusLoss,
+            draggable: isBool(options.draggable) ? options.draggable : props.draggable,
+            draggablePercent: isNum(options.draggablePercent) ? options.draggablePercent : props.draggablePercent,
+            draggableDirection: options.draggableDirection || props.draggableDirection,
+            closeOnClick: isBool(options.closeOnClick) ? options.closeOnClick : props.closeOnClick,
+            progressClassName: parseClassName(options.progressClassName || props.progressClassName),
+            progressStyle: options.progressStyle || props.progressStyle,
+            autoClose: options.isLoading ? false : getAutoCloseDelay(options.autoClose, props.autoClose),
+            hideProgressBar: isBool(options.hideProgressBar) ? options.hideProgressBar : props.hideProgressBar,
+            progress: options.progress,
+            role: isStr(options.role) ? options.role : props.role,
+            deleteToast: function deleteToast() {
+                removeFromCollection(toastId);
+            }
+        };
+        if (isFn(options.onOpen)) toastProps.onOpen = options.onOpen;
+        if (isFn(options.onClose)) toastProps.onClose = options.onClose; //  tweak for vertical dragging
+        if (toastProps.draggableDirection === "y" && toastProps.draggablePercent === 80) toastProps.draggablePercent *= 1.5;
+        var closeButton = props.closeButton;
+        if (options.closeButton === false || canBeRendered(options.closeButton)) closeButton = options.closeButton;
+        else if (options.closeButton === true) closeButton = canBeRendered(props.closeButton) ? props.closeButton : true;
+        toastProps.closeButton = closeButton;
+        var toastContent = content;
+        if (_react.isValidElement(content) && !isStr(content.type)) toastContent = _react.cloneElement(content, {
+            closeToast: closeToast,
+            toastProps: toastProps,
+            data: data
+        });
+        else if (isFn(content)) toastContent = content({
+            closeToast: closeToast,
+            toastProps: toastProps,
+            data: data
+        });
+         // not handling limit + delay by design. Waiting for user feedback first
+        if (props.limit && props.limit > 0 && toastCount > props.limit && isNotAnUpdate) queue1.push({
+            toastContent: toastContent,
+            toastProps: toastProps,
+            staleId: staleId
+        });
+        else if (isNum(delay) && delay > 0) setTimeout(function() {
+            appendToast(toastContent, toastProps, staleId);
+        }, delay);
+        else appendToast(toastContent, toastProps, staleId);
+    }
+    function appendToast(content, toastProps, staleId) {
+        var toastId = toastProps.toastId;
+        if (staleId) delete collection[staleId];
+        collection[toastId] = {
+            content: content,
+            props: toastProps
+        };
+        dispatch({
+            type: 0,
+            toastId: toastId,
+            staleId: staleId
+        });
+    }
+    function removeFromCollection(toastId) {
+        delete collection[toastId];
+        var queueLen = queue1.length;
+        toastCount = isToastIdValid(toastId) ? toastCount - 1 : toastCount - instance.displayedToast;
+        if (toastCount < 0) toastCount = 0;
+        if (queueLen > 0) {
+            var freeSlot = isToastIdValid(toastId) ? 1 : instance.props.limit;
+            if (queueLen === 1 || freeSlot === 1) {
+                instance.displayedToast++;
+                dequeueToast();
+            } else {
+                var toDequeue = freeSlot > queueLen ? queueLen : freeSlot;
+                instance.displayedToast = toDequeue;
+                for(var i = 0; i < toDequeue; i++)dequeueToast();
+            }
+        } else forceUpdate();
+    }
+    function getToastToRender(cb) {
+        var toastToRender = {
+        };
+        var toastList = props1.newestOnTop ? Object.keys(collection).reverse() : Object.keys(collection);
+        for(var i = 0; i < toastList.length; i++){
+            var _toast = collection[toastList[i]];
+            var position = _toast.props.position;
+            toastToRender[position] || (toastToRender[position] = []);
+            toastToRender[position].push(_toast);
+        }
+        return Object.keys(toastToRender).map(function(p) {
+            return cb(p, toastToRender[p]);
+        });
+    }
+    return {
+        getToastToRender: getToastToRender,
+        collection: collection,
+        containerRef: containerRef,
+        isToastActive: isToastActive
+    };
+}
+function getX(e) {
+    return e.targetTouches && e.targetTouches.length >= 1 ? e.targetTouches[0].clientX : e.clientX;
+}
+function getY(e) {
+    return e.targetTouches && e.targetTouches.length >= 1 ? e.targetTouches[0].clientY : e.clientY;
+}
+function useToast(props) {
+    var _useState = _react.useState(true), isRunning = _useState[0], setIsRunning = _useState[1];
+    var _useState2 = _react.useState(false), preventExitTransition = _useState2[0], setPreventExitTransition = _useState2[1];
+    var toastRef = _react.useRef(null);
+    var drag = useKeeper({
+        start: 0,
+        x: 0,
+        y: 0,
+        delta: 0,
+        removalDistance: 0,
+        canCloseOnClick: true,
+        canDrag: false,
+        boundingRect: null
+    });
+    var syncProps = useKeeper(props, true);
+    var autoClose = props.autoClose, pauseOnHover = props.pauseOnHover, closeToast = props.closeToast, onClick = props.onClick, closeOnClick = props.closeOnClick;
+    _react.useEffect(function() {
+        if (isFn(props.onOpen)) props.onOpen(_react.isValidElement(props.children) && props.children.props);
+        return function() {
+            if (isFn(syncProps.onClose)) syncProps.onClose(_react.isValidElement(syncProps.children) && syncProps.children.props);
+        };
+    }, []);
+    _react.useEffect(function() {
+        props.draggable && bindDragEvents();
+        return function() {
+            props.draggable && unbindDragEvents();
+        };
+    }, [
+        props.draggable
+    ]);
+    _react.useEffect(function() {
+        props.pauseOnFocusLoss && bindFocusEvents();
+        return function() {
+            props.pauseOnFocusLoss && unbindFocusEvents();
+        };
+    }, [
+        props.pauseOnFocusLoss
+    ]);
+    function onDragStart(e) {
+        if (props.draggable) {
+            var toast2 = toastRef.current;
+            drag.canCloseOnClick = true;
+            drag.canDrag = true;
+            drag.boundingRect = toast2.getBoundingClientRect();
+            toast2.style.transition = '';
+            drag.x = getX(e.nativeEvent);
+            drag.y = getY(e.nativeEvent);
+            if (props.draggableDirection === "x") {
+                drag.start = drag.x;
+                drag.removalDistance = toast2.offsetWidth * (props.draggablePercent / 100);
+            } else {
+                drag.start = drag.y;
+                drag.removalDistance = toast2.offsetHeight * (props.draggablePercent / 100);
+            }
+        }
+    }
+    function onDragTransitionEnd() {
+        if (drag.boundingRect) {
+            var _drag$boundingRect = drag.boundingRect, top = _drag$boundingRect.top, bottom = _drag$boundingRect.bottom, left = _drag$boundingRect.left, right = _drag$boundingRect.right;
+            if (props.pauseOnHover && drag.x >= left && drag.x <= right && drag.y >= top && drag.y <= bottom) pauseToast();
+            else playToast();
+        }
+    }
+    function playToast() {
+        setIsRunning(true);
+    }
+    function pauseToast() {
+        setIsRunning(false);
+    }
+    function bindFocusEvents() {
+        if (!document.hasFocus()) pauseToast();
+        window.addEventListener('focus', playToast);
+        window.addEventListener('blur', pauseToast);
+    }
+    function unbindFocusEvents() {
+        window.removeEventListener('focus', playToast);
+        window.removeEventListener('blur', pauseToast);
+    }
+    function bindDragEvents() {
+        document.addEventListener('mousemove', onDragMove);
+        document.addEventListener('mouseup', onDragEnd);
+        document.addEventListener('touchmove', onDragMove);
+        document.addEventListener('touchend', onDragEnd);
+    }
+    function unbindDragEvents() {
+        document.removeEventListener('mousemove', onDragMove);
+        document.removeEventListener('mouseup', onDragEnd);
+        document.removeEventListener('touchmove', onDragMove);
+        document.removeEventListener('touchend', onDragEnd);
+    }
+    function onDragMove(e) {
+        if (drag.canDrag) {
+            e.preventDefault();
+            var toast3 = toastRef.current;
+            if (isRunning) pauseToast();
+            drag.x = getX(e);
+            drag.y = getY(e);
+            if (props.draggableDirection === "x") drag.delta = drag.x - drag.start;
+            else drag.delta = drag.y - drag.start;
+             // prevent false positif during a toast click
+            if (drag.start !== drag.x) drag.canCloseOnClick = false;
+            toast3.style.transform = "translate" + props.draggableDirection + "(" + drag.delta + "px)";
+            toast3.style.opacity = "" + (1 - Math.abs(drag.delta / drag.removalDistance));
+        }
+    }
+    function onDragEnd() {
+        var toast4 = toastRef.current;
+        if (drag.canDrag) {
+            drag.canDrag = false;
+            if (Math.abs(drag.delta) > drag.removalDistance) {
+                setPreventExitTransition(true);
+                props.closeToast();
+                return;
+            }
+            toast4.style.transition = 'transform 0.2s, opacity 0.2s';
+            toast4.style.transform = "translate" + props.draggableDirection + "(0)";
+            toast4.style.opacity = '1';
+        }
+    }
+    var eventHandlers = {
+        onMouseDown: onDragStart,
+        onTouchStart: onDragStart,
+        onMouseUp: onDragTransitionEnd,
+        onTouchEnd: onDragTransitionEnd
+    };
+    if (autoClose && pauseOnHover) {
+        eventHandlers.onMouseEnter = pauseToast;
+        eventHandlers.onMouseLeave = playToast;
+    } // prevent toast from closing when user drags the toast
+    if (closeOnClick) eventHandlers.onClick = function(e) {
+        onClick && onClick(e);
+        drag.canCloseOnClick && closeToast();
+    };
+    return {
+        playToast: playToast,
+        pauseToast: pauseToast,
+        isRunning: isRunning,
+        preventExitTransition: preventExitTransition,
+        toastRef: toastRef,
+        eventHandlers: eventHandlers
+    };
+}
+function CloseButton(_ref) {
+    var closeToast = _ref.closeToast, theme = _ref.theme, _ref$ariaLabel = _ref.ariaLabel, ariaLabel = _ref$ariaLabel === void 0 ? 'close' : _ref$ariaLabel;
+    return _react.createElement("button", {
+        className: "Toastify__close-button Toastify__close-button--" + theme,
+        type: "button",
+        onClick: function onClick(e) {
+            e.stopPropagation();
+            closeToast(e);
+        },
+        "aria-label": ariaLabel
+    }, _react.createElement("svg", {
+        "aria-hidden": "true",
+        viewBox: "0 0 14 16"
+    }, _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M7.71 8.23l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75L1 11.98l3.75-3.75L1 4.48 2.48 3l3.75 3.75L9.98 3l1.48 1.48-3.75 3.75z"
+    })));
+}
+function ProgressBar(_ref) {
+    var _cx, _animationEvent;
+    var delay = _ref.delay, isRunning = _ref.isRunning, closeToast = _ref.closeToast, type = _ref.type, hide = _ref.hide, className = _ref.className, userStyle = _ref.style, controlledProgress = _ref.controlledProgress, progress = _ref.progress, rtl = _ref.rtl, isIn = _ref.isIn, theme = _ref.theme;
+    var style = _extends({
+    }, userStyle, {
+        animationDuration: delay + "ms",
+        animationPlayState: isRunning ? 'running' : 'paused',
+        opacity: hide ? 0 : 1
+    });
+    if (controlledProgress) style.transform = "scaleX(" + progress + ")";
+    var defaultClassName = _clsxDefault.default("Toastify__progress-bar", controlledProgress ? "Toastify__progress-bar--controlled" : "Toastify__progress-bar--animated", "Toastify__progress-bar-theme--" + theme, "Toastify__progress-bar--" + type, (_cx = {
+    }, _cx["Toastify__progress-bar--rtl"] = rtl, _cx));
+    var classNames = isFn(className) ? className({
+        rtl: rtl,
+        type: type,
+        defaultClassName: defaultClassName
+    }) : _clsxDefault.default(defaultClassName, className); // 🧐 controlledProgress is derived from progress
+    // so if controlledProgress is set
+    // it means that this is also the case for progress
+    var animationEvent = (_animationEvent = {
+    }, _animationEvent[controlledProgress && progress >= 1 ? 'onTransitionEnd' : 'onAnimationEnd'] = controlledProgress && progress < 1 ? null : function() {
+        isIn && closeToast();
+    }, _animationEvent); // TODO: add aria-valuenow, aria-valuemax, aria-valuemin
+    return _react.createElement("div", Object.assign({
+        role: "progressbar",
+        "aria-hidden": hide ? 'true' : 'false',
+        "aria-label": "notification timer",
+        className: classNames,
+        style: style
+    }, animationEvent));
+}
+ProgressBar.defaultProps = {
+    type: TYPE.DEFAULT,
+    hide: false
+};
+var _excluded$1 = [
+    "theme",
+    "type"
+];
+var Svg = function Svg(_ref) {
+    var theme = _ref.theme, type = _ref.type, rest = _objectWithoutPropertiesLoose(_ref, _excluded$1);
+    return _reactDefault.default.createElement("svg", Object.assign({
+        viewBox: "0 0 24 24",
+        width: "100%",
+        height: "100%",
+        fill: theme === 'colored' ? 'currentColor' : "var(--toastify-icon-color-" + type + ")"
+    }, rest));
+};
+function Warning(props) {
+    return _reactDefault.default.createElement(Svg, Object.assign({
+    }, props), _reactDefault.default.createElement("path", {
+        d: "M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"
+    }));
+}
+function Info(props) {
+    return _reactDefault.default.createElement(Svg, Object.assign({
+    }, props), _reactDefault.default.createElement("path", {
+        d: "M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0zm.25 5a1.5 1.5 0 11-1.5 1.5 1.5 1.5 0 011.5-1.5zm2.25 13.5h-4a1 1 0 010-2h.75a.25.25 0 00.25-.25v-4.5a.25.25 0 00-.25-.25h-.75a1 1 0 010-2h1a2 2 0 012 2v4.75a.25.25 0 00.25.25h.75a1 1 0 110 2z"
+    }));
+}
+function Success(props) {
+    return _reactDefault.default.createElement(Svg, Object.assign({
+    }, props), _reactDefault.default.createElement("path", {
+        d: "M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+    }));
+}
+function Error(props) {
+    return _reactDefault.default.createElement(Svg, Object.assign({
+    }, props), _reactDefault.default.createElement("path", {
+        d: "M11.983 0a12.206 12.206 0 00-8.51 3.653A11.8 11.8 0 000 12.207 11.779 11.779 0 0011.8 24h.214A12.111 12.111 0 0024 11.791 11.766 11.766 0 0011.983 0zM10.5 16.542a1.476 1.476 0 011.449-1.53h.027a1.527 1.527 0 011.523 1.47 1.475 1.475 0 01-1.449 1.53h-.027a1.529 1.529 0 01-1.523-1.47zM11 12.5v-6a1 1 0 012 0v6a1 1 0 11-2 0z"
+    }));
+}
+function Spinner() {
+    return _reactDefault.default.createElement("div", {
+        className: "Toastify__spinner"
+    });
+}
+var Icons = {
+    info: Info,
+    warning: Warning,
+    success: Success,
+    error: Error,
+    spinner: Spinner
+};
+var Toast = function Toast(props2) {
+    var _cx, _cx2;
+    var _useToast = useToast(props2), isRunning = _useToast.isRunning, preventExitTransition = _useToast.preventExitTransition, toastRef = _useToast.toastRef, eventHandlers = _useToast.eventHandlers;
+    var closeButton1 = props2.closeButton, children = props2.children, autoClose = props2.autoClose, onClick = props2.onClick, type = props2.type, hideProgressBar = props2.hideProgressBar, closeToast = props2.closeToast, Transition = props2.transition, position = props2.position, className = props2.className, style = props2.style, bodyClassName = props2.bodyClassName, bodyStyle = props2.bodyStyle, progressClassName = props2.progressClassName, progressStyle = props2.progressStyle, updateId = props2.updateId, role = props2.role, progress = props2.progress, rtl = props2.rtl, toastId = props2.toastId, deleteToast = props2.deleteToast, isIn = props2.isIn, isLoading = props2.isLoading, icon = props2.icon, theme = props2.theme;
+    var defaultClassName = _clsxDefault.default("Toastify__toast", "Toastify__toast-theme--" + theme, "Toastify__toast--" + type, (_cx = {
+    }, _cx["Toastify__toast--rtl"] = rtl, _cx));
+    var cssClasses = isFn(className) ? className({
+        rtl: rtl,
+        position: position,
+        type: type,
+        defaultClassName: defaultClassName
+    }) : _clsxDefault.default(defaultClassName, className);
+    var isProgressControlled = !!progress;
+    var maybeIcon = Icons[type];
+    var iconProps = {
+        theme: theme,
+        type: type
+    };
+    var Icon = maybeIcon && maybeIcon(iconProps);
+    if (icon === false) Icon = void 0;
+    else if (isFn(icon)) Icon = icon(iconProps);
+    else if (_react.isValidElement(icon)) Icon = _react.cloneElement(icon, iconProps);
+    else if (isStr(icon)) Icon = icon;
+    else if (isLoading) Icon = Icons.spinner();
+    function renderCloseButton(closeButton) {
+        if (!closeButton) return;
+        var props = {
+            closeToast: closeToast,
+            type: type,
+            theme: theme
+        };
+        if (isFn(closeButton)) return closeButton(props);
+        if (_react.isValidElement(closeButton)) return _react.cloneElement(closeButton, props);
+    }
+    return _react.createElement(Transition, {
+        isIn: isIn,
+        done: deleteToast,
+        position: position,
+        preventExitTransition: preventExitTransition,
+        nodeRef: toastRef
+    }, _react.createElement("div", Object.assign({
+        id: toastId,
+        onClick: onClick,
+        className: cssClasses
+    }, eventHandlers, {
+        style: style,
+        ref: toastRef
+    }), _react.createElement("div", Object.assign({
+    }, isIn && {
+        role: role
+    }, {
+        className: isFn(bodyClassName) ? bodyClassName({
+            type: type
+        }) : _clsxDefault.default("Toastify__toast-body", bodyClassName),
+        style: bodyStyle
+    }), Icon && _react.createElement("div", {
+        className: _clsxDefault.default("Toastify__toast-icon", (_cx2 = {
+        }, _cx2["Toastify--animate-icon Toastify__zoom-enter"] = !isLoading, _cx2))
+    }, Icon), _react.createElement("div", null, children)), renderCloseButton(closeButton1), (autoClose || isProgressControlled) && _react.createElement(ProgressBar, Object.assign({
+    }, updateId && !isProgressControlled ? {
+        key: "pb-" + updateId
+    } : {
+    }, {
+        rtl: rtl,
+        theme: theme,
+        delay: autoClose,
+        isRunning: isRunning,
+        isIn: isIn,
+        closeToast: closeToast,
+        hide: hideProgressBar,
+        type: type,
+        style: progressStyle,
+        className: progressClassName,
+        controlledProgress: isProgressControlled,
+        progress: progress
+    }))));
+};
+var Bounce = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__bounce-enter",
+    exit: "Toastify--animate Toastify__bounce-exit",
+    appendPosition: true
+});
+var Slide = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__slide-enter",
+    exit: "Toastify--animate Toastify__slide-exit",
+    appendPosition: true
+});
+var Zoom = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__zoom-enter",
+    exit: "Toastify--animate Toastify__zoom-exit"
+});
+var Flip = /*#__PURE__*/ cssTransition({
+    enter: "Toastify--animate Toastify__flip-enter",
+    exit: "Toastify--animate Toastify__flip-exit"
+});
+var ToastContainer = function ToastContainer(props) {
+    var _useToastContainer = useToastContainer(props), getToastToRender = _useToastContainer.getToastToRender, containerRef = _useToastContainer.containerRef, isToastActive = _useToastContainer.isToastActive;
+    var className = props.className, style = props.style, rtl = props.rtl, containerId = props.containerId;
+    function getClassName(position) {
+        var _cx;
+        var defaultClassName = _clsxDefault.default("Toastify__toast-container", "Toastify__toast-container--" + position, (_cx = {
+        }, _cx["Toastify__toast-container--rtl"] = rtl, _cx));
+        return isFn(className) ? className({
+            position: position,
+            rtl: rtl,
+            defaultClassName: defaultClassName
+        }) : _clsxDefault.default(defaultClassName, parseClassName(className));
+    }
+    return _react.createElement("div", {
+        ref: containerRef,
+        className: "Toastify",
+        id: containerId
+    }, getToastToRender(function(position, toastList) {
+        var containerStyle = toastList.length === 0 ? _extends({
+        }, style, {
+            pointerEvents: 'none'
+        }) : _extends({
+        }, style);
+        return _react.createElement("div", {
+            className: getClassName(position),
+            style: containerStyle,
+            key: "container-" + position
+        }, toastList.map(function(_ref) {
+            var content = _ref.content, toastProps = _ref.props;
+            return _react.createElement(Toast, Object.assign({
+            }, toastProps, {
+                isIn: isToastActive(toastProps.toastId),
+                key: "toast-" + toastProps.key,
+                closeButton: toastProps.closeButton === true ? CloseButton : toastProps.closeButton
+            }), content);
+        }));
+    }));
+};
+ToastContainer.defaultProps = {
+    position: POSITION.TOP_RIGHT,
+    transition: Bounce,
+    rtl: false,
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeButton: CloseButton,
+    pauseOnHover: true,
+    pauseOnFocusLoss: true,
+    closeOnClick: true,
+    newestOnTop: false,
+    draggable: true,
+    draggablePercent: 80,
+    draggableDirection: "x",
+    role: 'alert',
+    theme: 'light'
+};
+var containers = /*#__PURE__*/ new Map();
+var latestInstance;
+var containerDomNode;
+var containerConfig;
+var queue = [];
+var lazy = false;
+/**
+ * Check whether any container is currently mounted in the DOM
+ */ function isAnyContainerMounted() {
+    return containers.size > 0;
+}
+/**
+ * Get the toast by id, given it's in the DOM, otherwise returns null
+ */ function getToast(toastId, _ref) {
+    var containerId = _ref.containerId;
+    var container = containers.get(containerId || latestInstance);
+    if (!container) return null;
+    return container.getToast(toastId);
+}
+/**
+ * Generate a random toastId
+ */ function generateToastId() {
+    return Math.random().toString(36).substr(2, 9);
+}
+/**
+ * Generate a toastId or use the one provided
+ */ function getToastId(options) {
+    if (options && (isStr(options.toastId) || isNum(options.toastId))) return options.toastId;
+    return generateToastId();
+}
+/**
+ * If the container is not mounted, the toast is enqueued and
+ * the container lazy mounted
+ */ function dispatchToast(content, options) {
+    if (isAnyContainerMounted()) eventManager.emit(0, content, options);
+    else {
+        queue.push({
+            content: content,
+            options: options
+        });
+        if (lazy && canUseDom) {
+            lazy = false;
+            containerDomNode = document.createElement('div');
+            document.body.appendChild(containerDomNode);
+            _reactDom.render(_react.createElement(ToastContainer, Object.assign({
+            }, containerConfig)), containerDomNode);
+        }
+    }
+    return options.toastId;
+}
+/**
+ * Merge provided options with the defaults settings and generate the toastId
+ */ function mergeOptions(type, options) {
+    return _extends({
+    }, options, {
+        type: options && options.type || type,
+        toastId: getToastId(options)
+    });
+}
+var createToastByType = function createToastByType(type) {
+    return function(content, options) {
+        return dispatchToast(content, mergeOptions(type, options));
     };
 };
-
-},{}],"chiK4":[function(require,module,exports) {
-"use strict";
-var bundleURL = {
+var toast = function toast(content, options) {
+    return dispatchToast(content, mergeOptions(TYPE.DEFAULT, options));
 };
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
+toast.loading = function(content, options) {
+    return dispatchToast(content, mergeOptions(TYPE.DEFAULT, _extends({
+        isLoading: true,
+        autoClose: false,
+        closeOnClick: false,
+        closeButton: false,
+        draggable: false
+    }, options)));
+};
+function handlePromise(promise, _ref2, options) {
+    var pending = _ref2.pending, error = _ref2.error, success = _ref2.success;
+    var id;
+    if (pending) id = isStr(pending) ? toast.loading(pending, options) : toast.loading(pending.render, _extends({
+    }, options, pending));
+    var resetParams = {
+        isLoading: null,
+        autoClose: null,
+        closeOnClick: null,
+        closeButton: null,
+        draggable: null
+    };
+    var resolver = function resolver(type, input, result) {
+        var baseParams = _extends({
+            type: type
+        }, resetParams, options, {
+            data: result
+        });
+        var params = isStr(input) ? {
+            render: input
+        } : input; // if the id is set we know that it's an update
+        if (id) toast.update(id, _extends({
+        }, baseParams, params));
+        else // using toast.promise without loading
+        toast(params.render, _extends({
+        }, baseParams, params));
+        return result;
+    };
+    var p = isFn(promise) ? promise() : promise; //call the resolvers only when needed
+    p.then(function(result) {
+        return success && resolver('success', success, result);
+    })["catch"](function(err) {
+        return error && resolver('error', error, err);
+    });
+    return p;
 }
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return '/';
-}
-function getBaseURL(url) {
-    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
-    if (!matches) throw new Error('Origin not found');
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
+toast.promise = handlePromise;
+toast.success = /*#__PURE__*/ createToastByType(TYPE.SUCCESS);
+toast.info = /*#__PURE__*/ createToastByType(TYPE.INFO);
+toast.error = /*#__PURE__*/ createToastByType(TYPE.ERROR);
+toast.warning = /*#__PURE__*/ createToastByType(TYPE.WARNING);
+toast.warn = toast.warning;
+toast.dark = function(content, options) {
+    return dispatchToast(content, mergeOptions(TYPE.DEFAULT, _extends({
+        theme: 'dark'
+    }, options)));
+};
+/**
+ * Remove toast programmaticaly
+ */ toast.dismiss = function(id) {
+    return eventManager.emit(1, id);
+};
+/**
+ * Clear waiting queue when limit is used
+ */ toast.clearWaitingQueue = function(params) {
+    if (params === void 0) params = {
+    };
+    return eventManager.emit(5, params);
+};
+/**
+ * return true if one container is displaying the toast
+ */ toast.isActive = function(id) {
+    var isToastActive = false;
+    containers.forEach(function(container) {
+        if (container.isToastActive && container.isToastActive(id)) isToastActive = true;
+    });
+    return isToastActive;
+};
+toast.update = function(toastId, options) {
+    if (options === void 0) options = {
+    };
+    // if you call toast and toast.update directly nothing will be displayed
+    // this is why I defered the update
+    setTimeout(function() {
+        var toast5 = getToast(toastId, options);
+        if (toast5) {
+            var oldOptions = toast5.props, oldContent = toast5.content;
+            var nextOptions = _extends({
+            }, oldOptions, options, {
+                toastId: options.toastId || toastId,
+                updateId: generateToastId()
+            });
+            if (nextOptions.toastId !== toastId) nextOptions.staleId = toastId;
+            var content = nextOptions.render || oldContent;
+            delete nextOptions.render;
+            dispatchToast(content, nextOptions);
+        }
+    }, 0);
+};
+/**
+ * Used for controlled progress bar.
+ */ toast.done = function(id) {
+    toast.update(id, {
+        progress: 1
+    });
+};
+/**
+ * Track changes. The callback get the number of toast displayed
+ *
+ */ toast.onChange = function(callback) {
+    if (isFn(callback)) eventManager.on(4, callback);
+    return function() {
+        isFn(callback) && eventManager.off(4, callback);
+    };
+};
+/**
+ * Configure the ToastContainer when lazy mounted
+ */ toast.configure = function(config) {
+    if (config === void 0) config = {
+    };
+    lazy = true;
+    containerConfig = config;
+};
+toast.POSITION = POSITION;
+toast.TYPE = TYPE;
+/**
+ * Wait until the ToastContainer is mounted to dispatch the toast
+ * and attach isActive method
+ */ eventManager.on(2, function(containerInstance) {
+    latestInstance = containerInstance.containerId || containerInstance;
+    containers.set(latestInstance, containerInstance);
+    queue.forEach(function(item) {
+        eventManager.emit(0, item.content, item.options);
+    });
+    queue = [];
+}).on(3, function(containerInstance) {
+    containers["delete"](containerInstance.containerId || containerInstance);
+    if (containers.size === 0) eventManager.off(0).off(1).off(5);
+    if (canUseDom && containerDomNode) document.body.removeChild(containerDomNode);
+});
 
-},{}]},["emU3S","lo5eY","4iGqr"], "4iGqr", "parcelRequire4e1e")
+},{"react":"4mchR","clsx":"5PXc8","react-dom":"afyCw","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"5PXc8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function toVal(mix) {
+    var k, y, str = '';
+    if (typeof mix === 'string' || typeof mix === 'number') str += mix;
+    else if (typeof mix === 'object') {
+        if (Array.isArray(mix)) for(k = 0; k < mix.length; k++){
+            if (mix[k]) {
+                if (y = toVal(mix[k])) {
+                    str && (str += ' ');
+                    str += y;
+                }
+            }
+        }
+        else {
+            for(k in mix)if (mix[k]) {
+                str && (str += ' ');
+                str += k;
+            }
+        }
+    }
+    return str;
+}
+exports.default = function() {
+    var i = 0, tmp, x, str = '';
+    while(i < arguments.length){
+        if (tmp = arguments[i++]) {
+            if (x = toVal(tmp)) {
+                str && (str += ' ');
+                str += x;
+            }
+        }
+    }
+    return str;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["emU3S","lo5eY","4iGqr"], "4iGqr", "parcelRequire4e1e")
 
 //# sourceMappingURL=index.9969bc38.js.map

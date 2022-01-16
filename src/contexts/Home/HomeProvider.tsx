@@ -28,7 +28,7 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
     try {
       this.setState({ isFetching: true });
       const coinList = await getCoinList();
-      this.setState({ coinList });
+      this.setState({ coinList, filteredCoinList: coinList });
     } finally {
       this.setState({ isFetching: false });
     }
@@ -58,9 +58,28 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
 
   tempToggleLoading = () => this.setState(({ isFetching }) => ({ isFetching: !isFetching }));
 
+  filterCoinList = (filterKey: string) => {
+    const filterKeyLower = filterKey.toLowerCase();
+
+    this.setState(({ coinList }) => ({
+      filteredCoinList: coinList
+        .filter(({ symbol, name }) => symbol.includes(filterKeyLower) || name.toLowerCase().includes(filterKeyLower))
+        .sort((a, b) => {
+          if (a.symbol === filterKeyLower || a.name.toLowerCase() === filterKeyLower) {
+            return -1;
+          }
+          if (b.symbol === filterKeyLower || b.name.toLowerCase() === filterKeyLower) {
+            return 1;
+          }
+          return 0;
+        }),
+    }));
+  };
+
   actions: PickByType<IHomeContext, Function> = {
     fetchCoinList: this.fetchCoinList,
     fetchUserCoins: this.fetchUserCoins,
+    filterCoinList: this.filterCoinList,
   };
 
   render() {

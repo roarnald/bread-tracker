@@ -7,22 +7,26 @@ export interface IHomeContext {
   isFirstLoad: boolean;
   isFetching: boolean;
   coinList: ICoinItem[];
+  filteredCoinList: ICoinItem[];
   userCoinList: SimplePriceItemType;
 
   /* Actions */
   fetchCoinList: () => void;
   fetchUserCoins: () => void;
+  filterCoinList: (filterKey: string) => void;
 }
 
 export const initValue: IHomeContext = {
   isFirstLoad: true,
   isFetching: true,
   coinList: [],
+  filteredCoinList: [],
   userCoinList: {},
 
   /* Actions */
   fetchCoinList: () => {},
   fetchUserCoins: () => {},
+  filterCoinList: () => {},
 };
 
 export const HomeContext = React.createContext(initValue);

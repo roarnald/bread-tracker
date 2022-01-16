@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 import { HomeProvider, useHome } from '~/src/contexts/Home';
 import { withProvider } from '~/src/utils/ProviderHOC';
-import HomeTokenList from './HomeTokenList';
 import Footer from '../Public/Footer';
+import HomeSearchBar from './HomeSearchBar';
+import HomeTokenList from './HomeTokenList';
 
 const Home: React.FC = () => {
   const {} = useHome();
@@ -21,7 +22,7 @@ const Home: React.FC = () => {
               </p>
             </TypewriterHeaderWrapper>
 
-            <HomeSearchBar className="outline-neutral-600 border-2 my-6 rounded-full px-5 py-2 w-2/5" />
+            <HomeSearchBar />
           </div>
         </div>
       </div>
@@ -65,11 +66,5 @@ const TypewriterHeaderWrapper = styled.span`
         border-color: rgb(79 70 229 / var(--tw-text-opacity));
       }
     }
-  }
-`;
-
-const HomeSearchBar = styled.input`
-  @media screen and (max-width: 1024px) {
-    width: 100%;
   }
 `;

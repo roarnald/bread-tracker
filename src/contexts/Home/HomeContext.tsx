@@ -4,6 +4,7 @@ import { ICoinItem } from '~/src/api/Coins';
 import { SimplePriceItemType } from '~/src/api/Simple';
 
 export interface IHomeContext {
+  isFirstLoad: boolean;
   isFetching: boolean;
   coinList: ICoinItem[];
   userCoinList: SimplePriceItemType;
@@ -14,6 +15,7 @@ export interface IHomeContext {
 }
 
 export const initValue: IHomeContext = {
+  isFirstLoad: true,
   isFetching: true,
   coinList: [],
   userCoinList: {},

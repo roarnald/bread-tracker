@@ -2,9 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { useHome } from '~/src/contexts/Home';
+import Loading from '../Public/Loading';
 
 const HomeTokenList: React.FC = () => {
-  const { isFetching, userCoinList } = useHome();
+  const { isFirstLoad, isFetching, userCoinList } = useHome();
 
   return (
     <HomeTokenListContainer className="">
@@ -20,6 +21,14 @@ const HomeTokenList: React.FC = () => {
         </thead>
 
         <tbody>
+          {isFirstLoad && (
+            <tr>
+              <td colSpan={10}>
+                <Loading type="card" />
+              </td>
+            </tr>
+          )}
+
           {Object.entries(userCoinList).map(([key, { usd, usd_market_cap, usd_24h_change, usd_24h_vol }]) => (
             <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600" key={key}>
               <td className="p-4 capitalize sticky left-0 bg-white">{key}</td>
@@ -38,9 +47,15 @@ const HomeTokenList: React.FC = () => {
 export default HomeTokenList;
 
 const HomeTokenListContainer = styled.div`
+  width: 90vw;
+  max-width: 900px;
   margin: auto;
 
   overflow: auto;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   animation: fadeIn 0.5s;
 

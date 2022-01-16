@@ -20,7 +20,7 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
   }
 
   componentDidMount() {
-    // this.fetchCoinList();
+    this.fetchCoinList();
     this.fetchUserCoins();
   }
 
@@ -46,7 +46,13 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
       });
       this.setState({ userCoinList });
     } finally {
+      const { isFirstLoad } = this.state;
+
       this.setState({ isFetching: false });
+
+      if (isFirstLoad) {
+        this.setState({ isFirstLoad: false });
+      }
     }
   };
 

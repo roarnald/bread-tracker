@@ -24,7 +24,7 @@ const FooterContainer = styled.footer`
   position: absolute;
   bottom: 0;
 
-  margin: 18px;
+  padding: 18px;
   min-width: max-content;
 `;
 

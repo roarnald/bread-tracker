@@ -8,10 +8,10 @@ const HomeTokenList: React.FC = () => {
 
   return (
     <HomeTokenListContainer className="">
-      <table className="table-auto min-w-full">
+      <table className="table-auto min-w-full ">
         <thead>
-          <tr className="text-left text-xs border-b-2">
-            <th className="p-4 pb-2 w-96">Name</th>
+          <tr className="text-left text-xs border-b-2 ">
+            <th className="p-4 pb-2 w-96 sticky left-0 bg-white">Name</th>
             <th className="p-4 pb-2">Price</th>
             <th className="p-4 pb-2">Market Cap</th>
             <th className="p-4 pb-2">24h Change</th>
@@ -21,8 +21,8 @@ const HomeTokenList: React.FC = () => {
 
         <tbody>
           {Object.entries(userCoinList).map(([key, { usd, usd_market_cap, usd_24h_change, usd_24h_vol }]) => (
-            <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600">
-              <td className="p-4 capitalize">{key}</td>
+            <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600" key={key}>
+              <td className="p-4 capitalize sticky left-0 bg-white">{key}</td>
               <td className="p-4">{usd}</td>
               <td className="p-4">{usd_market_cap}</td>
               <td className="p-4">{usd_24h_change}</td>
@@ -40,8 +40,7 @@ export default HomeTokenList;
 const HomeTokenListContainer = styled.div`
   margin: auto;
 
-  width: 80vw;
-  min-width: 450px;
+  overflow: auto;
 
   animation: fadeIn 0.5s;
 

@@ -685,7 +685,7 @@ $RefreshReg$(_c4, "HomeSearchBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","styled-components":"dOPCJ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","./HomeTokenList":"kUCev","~/src/contexts/Home":"d1Rfi","~/src/utils/ProviderHOC":"bPUxl","../Public/Footer":"7IE0T"}],"dOPCJ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","styled-components":"dOPCJ","~/src/contexts/Home":"d1Rfi","~/src/utils/ProviderHOC":"bPUxl","./HomeTokenList":"kUCev","../Public/Footer":"7IE0T","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"dOPCJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ServerStyleSheet", ()=>Je
@@ -2602,218 +2602,7 @@ module.exports = require('./cjs/react-is.development.js');
     exports.typeOf = typeOf;
 })();
 
-},{}],"kUCev":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0186 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0186.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-var _home = require("~/src/contexts/Home");
-var _s = $RefreshSig$();
-const HomeTokenList = ()=>{
-    _s();
-    const { isFetching , userCoinList  } = _home.useHome();
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(HomeTokenListContainer, {
-        className: "",
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("table", {
-            className: "table-auto min-w-full",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("thead", {
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("tr", {
-                        className: "text-left text-xs border-b-2",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
-                                className: "p-4 pb-2 w-96",
-                                children: "Name"
-                            }, void 0, false, {
-                                fileName: "src/components/Home/HomeTokenList.tsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
-                                className: "p-4 pb-2",
-                                children: "Price"
-                            }, void 0, false, {
-                                fileName: "src/components/Home/HomeTokenList.tsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
-                                className: "p-4 pb-2",
-                                children: "Market Cap"
-                            }, void 0, false, {
-                                fileName: "src/components/Home/HomeTokenList.tsx",
-                                lineNumber: 16,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
-                                className: "p-4 pb-2",
-                                children: "24h Change"
-                            }, void 0, false, {
-                                fileName: "src/components/Home/HomeTokenList.tsx",
-                                lineNumber: 17,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
-                                className: "p-4 pb-2",
-                                children: "24h Volume"
-                            }, void 0, false, {
-                                fileName: "src/components/Home/HomeTokenList.tsx",
-                                lineNumber: 18,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Home/HomeTokenList.tsx",
-                        lineNumber: 13,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/Home/HomeTokenList.tsx",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("tbody", {
-                    children: Object.entries(userCoinList).map(([key, { usd , usd_market_cap , usd_24h_change , usd_24h_vol  }])=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(DataTableRow, {
-                            $isLoading: isFetching,
-                            className: "border-b-2 border-gray-50 text-gray-600",
-                            children: [
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
-                                    className: "p-4 capitalize",
-                                    children: key
-                                }, void 0, false, {
-                                    fileName: "src/components/Home/HomeTokenList.tsx",
-                                    lineNumber: 25,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
-                                    className: "p-4",
-                                    children: usd
-                                }, void 0, false, {
-                                    fileName: "src/components/Home/HomeTokenList.tsx",
-                                    lineNumber: 26,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
-                                    className: "p-4",
-                                    children: usd_market_cap
-                                }, void 0, false, {
-                                    fileName: "src/components/Home/HomeTokenList.tsx",
-                                    lineNumber: 27,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
-                                    className: "p-4",
-                                    children: usd_24h_change
-                                }, void 0, false, {
-                                    fileName: "src/components/Home/HomeTokenList.tsx",
-                                    lineNumber: 28,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
-                                    className: "p-4",
-                                    children: usd_24h_vol
-                                }, void 0, false, {
-                                    fileName: "src/components/Home/HomeTokenList.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 15
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Home/HomeTokenList.tsx",
-                            lineNumber: 24,
-                            columnNumber: 13
-                        }, undefined)
-                    )
-                }, void 0, false, {
-                    fileName: "src/components/Home/HomeTokenList.tsx",
-                    lineNumber: 22,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/Home/HomeTokenList.tsx",
-            lineNumber: 11,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Home/HomeTokenList.tsx",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined));
-};
-_s(HomeTokenList, "SPQbJUFetq/nL462TQZCXw+ZkLo=", false, function() {
-    return [
-        _home.useHome
-    ];
-});
-_c = HomeTokenList;
-exports.default = HomeTokenList;
-const HomeTokenListContainer = _styledComponentsDefault.default.div`
-  margin: auto;
-
-  width: 80vw;
-  min-width: 450px;
-
-  animation: fadeIn 0.5s;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
-_c1 = HomeTokenListContainer;
-const DataTableRow = _styledComponentsDefault.default.tr`
-  animation: fadeIn 0.7s;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  ${({ $isLoading  })=>$isLoading ? _styledComponents.css`
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-
-          @keyframes pulse {
-            0%,
-            100% {
-              opacity: 0.6;
-            }
-            50% {
-              opacity: 0.2;
-            }
-          }
-        ` : ''
-}
-`;
-_c2 = DataTableRow;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "HomeTokenList");
-$RefreshReg$(_c1, "HomeTokenListContainer");
-$RefreshReg$(_c2, "DataTableRow");
-
-  $parcel$ReactRefreshHelpers$0186.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","styled-components":"dOPCJ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","~/src/contexts/Home":"d1Rfi"}],"d1Rfi":[function(require,module,exports) {
+},{}],"d1Rfi":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$36f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -2967,7 +2756,7 @@ class HomeProvider extends _reactDefault.default.PureComponent {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","~/src/api/Coins":"cSqgT","./HomeContext":"9bX35","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","~/src/api/Simple":"lHBz1"}],"cSqgT":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","~/src/api/Coins":"cSqgT","~/src/api/Simple":"lHBz1","./HomeContext":"9bX35","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"cSqgT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getCoinList", ()=>getCoinList
@@ -3013,7 +2802,7 @@ class Request {
 const request = new Request();
 exports.default = request;
 
-},{"axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","react-toastify":"24XKh"}],"1IeuP":[function(require,module,exports) {
+},{"axios":"1IeuP","react-toastify":"24XKh","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1IeuP":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"ePOwX"}],"ePOwX":[function(require,module,exports) {
@@ -4621,7 +4410,217 @@ function withProvider(Provider, Component) {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"7IE0T":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"kUCev":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0186 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0186.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+var _home = require("~/src/contexts/Home");
+var _s = $RefreshSig$();
+const HomeTokenList = ()=>{
+    _s();
+    const { isFetching , userCoinList  } = _home.useHome();
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(HomeTokenListContainer, {
+        className: "",
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("table", {
+            className: "table-auto min-w-full ",
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("thead", {
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("tr", {
+                        className: "text-left text-xs border-b-2 ",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
+                                className: "p-4 pb-2 w-96 sticky left-0 bg-white",
+                                children: "Name"
+                            }, void 0, false, {
+                                fileName: "src/components/Home/HomeTokenList.tsx",
+                                lineNumber: 14,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
+                                className: "p-4 pb-2",
+                                children: "Price"
+                            }, void 0, false, {
+                                fileName: "src/components/Home/HomeTokenList.tsx",
+                                lineNumber: 15,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
+                                className: "p-4 pb-2",
+                                children: "Market Cap"
+                            }, void 0, false, {
+                                fileName: "src/components/Home/HomeTokenList.tsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
+                                className: "p-4 pb-2",
+                                children: "24h Change"
+                            }, void 0, false, {
+                                fileName: "src/components/Home/HomeTokenList.tsx",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("th", {
+                                className: "p-4 pb-2",
+                                children: "24h Volume"
+                            }, void 0, false, {
+                                fileName: "src/components/Home/HomeTokenList.tsx",
+                                lineNumber: 18,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Home/HomeTokenList.tsx",
+                        lineNumber: 13,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Home/HomeTokenList.tsx",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("tbody", {
+                    children: Object.entries(userCoinList).map(([key, { usd , usd_market_cap , usd_24h_change , usd_24h_vol  }])=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(DataTableRow, {
+                            $isLoading: isFetching,
+                            className: "border-b-2 border-gray-50 text-gray-600",
+                            children: [
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
+                                    className: "p-4 capitalize sticky left-0 bg-white",
+                                    children: key
+                                }, void 0, false, {
+                                    fileName: "src/components/Home/HomeTokenList.tsx",
+                                    lineNumber: 25,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
+                                    className: "p-4",
+                                    children: usd
+                                }, void 0, false, {
+                                    fileName: "src/components/Home/HomeTokenList.tsx",
+                                    lineNumber: 26,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
+                                    className: "p-4",
+                                    children: usd_market_cap
+                                }, void 0, false, {
+                                    fileName: "src/components/Home/HomeTokenList.tsx",
+                                    lineNumber: 27,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
+                                    className: "p-4",
+                                    children: usd_24h_change
+                                }, void 0, false, {
+                                    fileName: "src/components/Home/HomeTokenList.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("td", {
+                                    className: "p-4",
+                                    children: usd_24h_vol
+                                }, void 0, false, {
+                                    fileName: "src/components/Home/HomeTokenList.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, key, true, {
+                            fileName: "src/components/Home/HomeTokenList.tsx",
+                            lineNumber: 24,
+                            columnNumber: 13
+                        }, undefined)
+                    )
+                }, void 0, false, {
+                    fileName: "src/components/Home/HomeTokenList.tsx",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Home/HomeTokenList.tsx",
+            lineNumber: 11,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Home/HomeTokenList.tsx",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined));
+};
+_s(HomeTokenList, "SPQbJUFetq/nL462TQZCXw+ZkLo=", false, function() {
+    return [
+        _home.useHome
+    ];
+});
+_c = HomeTokenList;
+exports.default = HomeTokenList;
+const HomeTokenListContainer = _styledComponentsDefault.default.div`
+  margin: auto;
+
+  overflow: auto;
+
+  animation: fadeIn 0.5s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+_c1 = HomeTokenListContainer;
+const DataTableRow = _styledComponentsDefault.default.tr`
+  animation: fadeIn 0.7s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  ${({ $isLoading  })=>$isLoading ? _styledComponents.css`
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+          @keyframes pulse {
+            0%,
+            100% {
+              opacity: 0.6;
+            }
+            50% {
+              opacity: 0.2;
+            }
+          }
+        ` : ''
+}
+`;
+_c2 = DataTableRow;
+var _c, _c1, _c2;
+$RefreshReg$(_c, "HomeTokenList");
+$RefreshReg$(_c1, "HomeTokenListContainer");
+$RefreshReg$(_c2, "DataTableRow");
+
+  $parcel$ReactRefreshHelpers$0186.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"3jZUD","react":"4mchR","styled-components":"dOPCJ","~/src/contexts/Home":"d1Rfi","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"7IE0T":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$fb3a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -4681,7 +4680,7 @@ const FooterContainer = _styledComponentsDefault.default.footer`
   position: absolute;
   bottom: 0;
 
-  margin: 18px;
+  padding: 18px;
   min-width: max-content;
 `;
 _c1 = FooterContainer;

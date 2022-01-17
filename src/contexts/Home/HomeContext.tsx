@@ -16,6 +16,7 @@ export interface IHomeContext {
   fetchCoinList: () => void;
   fetchUserCoins: () => void;
   filterCoinList: (filterKey: string) => void;
+  handleDelete: (id: string) => () => void;
 }
 
 export const initValue: IHomeContext = {
@@ -29,6 +30,7 @@ export const initValue: IHomeContext = {
   fetchCoinList: () => {},
   fetchUserCoins: () => {},
   filterCoinList: () => {},
+  handleDelete: () => () => {},
 };
 
 export const HomeContext = React.createContext(initValue);

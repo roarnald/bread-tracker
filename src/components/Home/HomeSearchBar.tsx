@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useVirtual } from 'react-virtual';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
 import { ICoinItem } from '~/src/api/Coins';
-import { useHome } from '~/src/contexts/Home';
 import { STORAGE_KEY } from '~/src/contexts/Home/HomeContext';
+import { useHome } from '~/src/contexts/Home';
 
 const HomeSearchBar: React.FC = () => {
-  const { filteredCoinList, filterCoinList, fetchUserCoins } = useHome();
+  const { filteredCoinList, userCoinList, filterCoinList, fetchUserCoins } = useHome();
 
   const [searchFocused, setSearchFocused] = useState(false);
 
@@ -24,7 +25,7 @@ const HomeSearchBar: React.FC = () => {
     ({ id }: ICoinItem) =>
     () => {
       const currentSavedList = localStorage.getItem(STORAGE_KEY);
-      if (!currentSavedList?.includes(id)) {
+      if (!currentSavedList?.split(',').includes(id)) {
         localStorage.setItem(STORAGE_KEY, `${currentSavedList || ''}${id},`);
         fetchUserCoins();
       }
@@ -43,7 +44,7 @@ const HomeSearchBar: React.FC = () => {
         ref={parentRef}
         className={`${
           searchFocused ? 'fixed' : 'hidden'
-        } left-0 right-0 m-auto border-2 border-t-0 bg-white z-20 rounded-b-xl overflow-auto ease-in-out duration-300`}
+        } left-0 right-0 m-auto border-2 border-t-0 bg-white z-20 rounded-b-xl overflow-auto mt-2px`}
       >
         <div
           style={{
@@ -59,7 +60,7 @@ const HomeSearchBar: React.FC = () => {
               onMouseDown={handleDropdownItemClick(filteredCoinList[index])}
               $height={size}
               $transform={start}
-              $selected={filteredCoinList[index].id === 'bitcoin'}
+              $selected={!!userCoinList[filteredCoinList[index].id]}
             >
               {filteredCoinList[index].name}
             </DropdownVirtualItem>
@@ -104,5 +105,15 @@ const DropdownVirtualItem = styled.div<IDropdownVirtualItemProps>`
   width: 100%;
   height: ${({ $height }) => `${$height}px`};
   transform: ${({ $transform }) => `translateY(${$transform}px)`};
-  background: ${({ $selected }) => ($selected ? 'red' : '')};
+  ${({ $selected }) =>
+    $selected
+      ? css`
+          background: #eee;
+          color: #aaa;
+          cursor: not-allowed !important;
+          :hover {
+            background: #eee;
+          }
+        `
+      : ''};
 `;

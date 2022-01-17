@@ -1,8 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 
 import { useHome } from '~/src/contexts/Home';
-import { STORAGE_KEY } from '~/src/contexts/Home/HomeContext';
 import { formatNumber } from '~/src/utils/Common';
 import Loading from '../Public/Loading';
 
@@ -18,8 +17,9 @@ const getChangeIndicator = (change: number) => {
 };
 
 const HomeTokenList: React.FC = () => {
-  const { isFirstLoad, isFetching, userCoinList, fetchUserCoins } = useHome();
+  const { isFirstLoad, isFetching, userCoinList, handleDelete } = useHome();
 
+  const tableRef = useRef<HTMLDivElement>(null);
   const [showDelete, setShowDelete] = useState(false);
 
   const toggleDeleteState = () => setShowDelete(!showDelete);
@@ -29,15 +29,14 @@ const HomeTokenList: React.FC = () => {
     [userCoinList],
   );
 
-  const handleDelete = (id: string) => () => {
-    const currentSavedList = localStorage.getItem(STORAGE_KEY);
-    console.log({ id }, currentSavedList?.replace(`${id},`, '') || '');
-    localStorage.setItem(STORAGE_KEY, currentSavedList?.replace(`${id},`, '') || '');
-    fetchUserCoins();
-  };
+  useEffect(() => {
+    if (showDelete) {
+      tableRef.current?.scrollBy({ left: 50, behavior: 'smooth' });
+    }
+  }, [showDelete]);
 
   return (
-    <HomeTokenListContainer className="overflow-auto">
+    <HomeTokenListContainer className="overflow-auto" ref={tableRef}>
       <table className="table-auto min-w-full border-separate">
         <thead>
           <tr className="text-left text-xs sticky top-0 z-10 bg-white">
@@ -78,37 +77,47 @@ const HomeTokenList: React.FC = () => {
             </tr>
           )}
 
-          {sortedUserCoinList.map(([key, { usd, usd_market_cap, usd_24h_change, usd_24h_vol }]) => (
-            <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600" key={key}>
-              <td className="p-4 capitalize sticky left-0 bg-white">{key.replaceAll('-', ' ')}</td>
-              <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd)}</td>
-              <td className="p-4">{formatNumber(usd_market_cap)}</td>
-              <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd_24h_change)} %</td>
-              <td className="p-4 pr-0">
-                <div className="flex justify-between">
-                  <div>{formatNumber(usd_24h_vol)}</div>
-                  {showDelete && (
-                    <div className="ml-3 cursor-pointer" onClick={handleDelete(key)}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="red"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                        />
-                      </svg>
-                    </div>
-                  )}
+          {sortedUserCoinList.length > 0 ? (
+            sortedUserCoinList.map(([key, { usd, usd_market_cap, usd_24h_change, usd_24h_vol }]) => (
+              <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600" key={key}>
+                <td className="p-4 capitalize sticky left-0 bg-white">{key.replaceAll('-', ' ')}</td>
+                <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd)}</td>
+                <td className="p-4">{formatNumber(usd_market_cap)}</td>
+                <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd_24h_change)} %</td>
+                <td className="p-4 pr-0">
+                  <div className="flex justify-between">
+                    <div>{formatNumber(usd_24h_vol)}</div>
+                    {showDelete && (
+                      <div className="ml-3 cursor-pointer" onClick={handleDelete(key)}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="red"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                          />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                </td>
+              </DataTableRow>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={10}>
+                <div className={`flex justify-center items-center h-24 text-gray-400 ${isFirstLoad ? 'hidden' : ''}`}>
+                  Whoops! You deleted everything. Search up a new coin to add to list!
                 </div>
               </td>
-            </DataTableRow>
-          ))}
+            </tr>
+          )}
         </tbody>
       </table>
     </HomeTokenListContainer>

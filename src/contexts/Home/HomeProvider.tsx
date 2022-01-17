@@ -83,10 +83,18 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
     }));
   };
 
+  handleDelete = (id: string) => () => {
+    this.setState(({ userCoinList: { [id]: omit, ...restCoins } }) => ({ userCoinList: restCoins }));
+
+    const currentSavedList = localStorage.getItem(STORAGE_KEY);
+    localStorage.setItem(STORAGE_KEY, currentSavedList?.replace(`${id},`, '') || '');
+  };
+
   actions: PickByType<IHomeContext, Function> = {
     fetchCoinList: this.fetchCoinList,
     fetchUserCoins: this.fetchUserCoins,
     filterCoinList: this.filterCoinList,
+    handleDelete: this.handleDelete,
   };
 
   render() {

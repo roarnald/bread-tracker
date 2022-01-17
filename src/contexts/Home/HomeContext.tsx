@@ -3,6 +3,8 @@ import React from 'react';
 import { ICoinItem } from '~/src/api/Coins';
 import { SimplePriceItemType } from '~/src/api/Simple';
 
+export const STORAGE_KEY = 'coin-list';
+
 export interface IHomeContext {
   isFirstLoad: boolean;
   isFetching: boolean;

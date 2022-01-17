@@ -2,9 +2,9 @@ import React from 'react';
 
 import { getCoinList } from '~/src/api/Coins';
 import { getSimplePrice } from '~/src/api/Simple';
-import { HomeContext, IHomeContext, initValue } from './HomeContext';
+import { HomeContext, IHomeContext, initValue, STORAGE_KEY } from './HomeContext';
 
-const TEMP_USER_COINS = 'bitcoin,ethereum,cardano';
+const BASIC_COIN_LIST = 'bitcoin,ethereum,cardano,';
 
 interface IHomeProviderProps {}
 
@@ -20,6 +20,13 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
   }
 
   componentDidMount() {
+    /**
+     * Set user list to basic list if first visit
+     */
+    if (localStorage.getItem(STORAGE_KEY) === null) {
+      localStorage.setItem(STORAGE_KEY, BASIC_COIN_LIST);
+    }
+
     this.fetchCoinList();
     this.fetchUserCoins();
   }
@@ -37,7 +44,7 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
   fetchUserCoins = async () => {
     try {
       const userCoinList = await getSimplePrice({
-        ids: TEMP_USER_COINS,
+        ids: localStorage.getItem(STORAGE_KEY) || '',
         vs_currencies: 'usd',
         include_market_cap: true,
         include_24hr_vol: true,

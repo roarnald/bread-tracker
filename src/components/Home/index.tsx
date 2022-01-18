@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       <div className="pt-20 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide">bread.tracker</h2>
+            <h2 className="text-base text-indigo-600 font-semibold tracking-wide">breadtracker.xyz</h2>
             <TypewriterHeaderWrapper>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 A lightweight way to track that bread. 🍞

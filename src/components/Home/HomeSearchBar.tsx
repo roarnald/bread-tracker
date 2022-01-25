@@ -48,13 +48,7 @@ const HomeSearchBar: React.FC = () => {
           searchFocused ? 'fixed' : 'hidden'
         } left-0 right-0 m-auto border-2 border-t-0 bg-white z-20 rounded-b-xl overflow-auto mt-2px`}
       >
-        <div
-          style={{
-            height: `${totalSize}px`,
-            width: '100%',
-            position: 'relative',
-          }}
-        >
+        <DropdownContainer $height={`${totalSize}px`}>
           {virtualItems.map(({ index, size, start }) => (
             <DropdownVirtualItem
               className="flex items-center p-2 hover:bg-indigo-100 hover:cursor-pointer"
@@ -67,7 +61,7 @@ const HomeSearchBar: React.FC = () => {
               {filteredCoinList[index].name}
             </DropdownVirtualItem>
           ))}
-        </div>
+        </DropdownContainer>
       </SearchResultDropdown>
     </>
   );
@@ -89,6 +83,12 @@ const SearchResultDropdown = styled.div`
   @media screen and (max-width: 1024px) {
     width: calc(100% - 78px);
   }
+`;
+
+const DropdownContainer = styled.div<{ $height: string }>`
+  height: ${({ $height }) => $height};
+  width: 100%;
+  position: relative;
 `;
 
 interface IDropdownVirtualItemProps {

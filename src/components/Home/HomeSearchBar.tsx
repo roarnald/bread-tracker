@@ -49,6 +49,7 @@ const HomeSearchBar: React.FC = () => {
         } left-0 right-0 m-auto border-2 border-t-0 bg-white z-20 rounded-b-xl overflow-auto mt-2px`}
       >
         <DropdownContainer $height={`${totalSize}px`}>
+          {console.log({ totalSize })}
           {virtualItems.map(({ index, size, start }) => (
             <DropdownVirtualItem
               className="flex items-center p-2 hover:bg-indigo-100 hover:cursor-pointer"
@@ -78,7 +79,7 @@ const StyledHomeSearchBar = styled.input`
 
 const SearchResultDropdown = styled.div`
   width: 420px;
-  max-height: 50vw;
+  max-height: 50vh;
 
   @media screen and (max-width: 1024px) {
     width: calc(100% - 78px);

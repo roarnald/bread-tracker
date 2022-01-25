@@ -1,7 +1,7 @@
-function e(e,t,r,n){Object.defineProperty(e,t,{get:r,set:n,enumerable:!0,configurable:!0})}function t(e){return e&&e.__esModule?e.default:e}var r=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire4e1e;r.register("6kVyV",(function(t,n){var i;i=t.exports,Object.defineProperty(i,"__esModule",{value:!0,configurable:!0}),e(t.exports,"default",(()=>p));var o=r("7C6UD");r("eCRxs");var s=r("1YCc5"),a=r("ioZho"),c=r("gu0iz"),u=r("3srgX"),l=r("gsvOf"),f=r("kAg5x"),d=r("doYLa");var p=u.withProvider(c.HomeProvider,(()=>{const{}=a.useHome();return o.jsxs(h,{children:[o.jsx("div",{className:"pt-20 pb-10 bg-white",children:o.jsx("div",{className:"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",children:o.jsxs("div",{className:"lg:text-center",children:[o.jsx("h2",{className:"text-base text-indigo-600 font-semibold tracking-wide",children:"breadtracker.xyz"}),o.jsx(m,{children:o.jsx("p",{className:"mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl",children:"A lightweight way to track that bread. 🍞"})}),o.jsx(f.default,{})]})})}),o.jsx(d.default,{}),o.jsx(l.default,{})]})}));const h=s.default.div``,m=s.default.span`
+function e(e,t,r,n){Object.defineProperty(e,t,{get:r,set:n,enumerable:!0,configurable:!0})}function t(e){return e&&e.__esModule?e.default:e}var r=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire4e1e;r.register("6kVyV",(function(t,n){var i;i=t.exports,Object.defineProperty(i,"__esModule",{value:!0,configurable:!0}),e(t.exports,"default",(()=>p));var o=r("7C6UD");r("eCRxs");var s=r("1YCc5"),a=r("ioZho"),c=r("gu0iz"),u=r("3srgX"),l=r("gsvOf"),f=r("kAg5x"),d=r("doYLa");var p=u.withProvider(c.HomeProvider,(()=>{const{}=a.useHome();return o.jsxs(h,{children:[o.jsx("div",{className:"pt-20 pb-10 bg-white",children:o.jsx("div",{className:"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",children:o.jsxs("div",{className:"lg:text-center flex items-center flex-col ",children:[o.jsx("h2",{className:"text-base text-indigo-600 font-semibold tracking-wide",children:"breadtracker.xyz"}),o.jsx(m,{children:o.jsx("p",{className:"mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl",children:"A lightweight way to track that bread. 🍞"})}),o.jsx(f.default,{})]})})}),o.jsx(d.default,{}),o.jsx(l.default,{})]})}));const h=s.default.div``,m=s.default.span`
   @media screen and (min-width: 1024px) {
     p {
-      width: 660px;
+      width: 100%;
       overflow: hidden;
       border-right: 0.15em solid indigo;
       white-space: nowrap;
@@ -14,7 +14,7 @@ function e(e,t,r,n){Object.defineProperty(e,t,{get:r,set:n,enumerable:!0,configu
         width: 0;
       }
       to {
-        width: 660px;
+        width: 100%;
       }
     }
 
@@ -153,4 +153,4 @@ function e(e,t,r,n){Object.defineProperty(e,t,{get:r,set:n,enumerable:!0,configu
     }
   }
 `}));
-//# sourceMappingURL=Home.0dddd514.js.map
+//# sourceMappingURL=Home.29e9b416.js.map

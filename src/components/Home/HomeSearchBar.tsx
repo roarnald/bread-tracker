@@ -33,12 +33,14 @@ const HomeSearchBar: React.FC = () => {
 
   return (
     <>
-      <StyledHomeSearchBar
-        onChange={(e) => filterCoinList(e.target.value)}
-        onBlur={handleSearchFocused(false)}
-        onFocus={handleSearchFocused(true)}
-        className="outline-neutral-600 border-2 mt-6 rounded-full px-5 py-2 z-30"
-      />
+      <div className="flex justify-center">
+        <StyledHomeSearchBar
+          onChange={(e) => filterCoinList(e.target.value)}
+          onBlur={handleSearchFocused(false)}
+          onFocus={handleSearchFocused(true)}
+          className="outline-neutral-600 border-2 mt-6 rounded-full px-5 py-2 z-30"
+        />
+      </div>
 
       <SearchResultDropdown
         ref={parentRef}

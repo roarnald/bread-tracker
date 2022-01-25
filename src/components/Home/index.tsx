@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     <HomeContainer>
       <div className="pt-20 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
+          <div className="lg:text-center flex items-center flex-col	">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide">breadtracker.xyz</h2>
             <TypewriterHeaderWrapper>
               <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -40,7 +40,7 @@ const HomeContainer = styled.div``;
 const TypewriterHeaderWrapper = styled.span`
   @media screen and (min-width: 1024px) {
     p {
-      width: 660px;
+      width: 100%;
       overflow: hidden;
       border-right: 0.15em solid indigo;
       white-space: nowrap;
@@ -53,7 +53,7 @@ const TypewriterHeaderWrapper = styled.span`
         width: 0;
       }
       to {
-        width: 660px;
+        width: 100%;
       }
     }
 

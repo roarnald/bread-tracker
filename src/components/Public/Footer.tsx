@@ -11,6 +11,13 @@ const Footer: React.FC = () => {
         </GithubLink>
       </div>
       <div>Powered by CoinGecko API v3</div>
+      <div className="italic">
+        drop me some{' '}
+        <a href="https://forms.gle/1huQcJFuUiJeft7N7" className=" text-indigo-600" target="_blank">
+          feedback
+        </a>{' '}
+        or features you wanna see!
+      </div>
     </FooterContainer>
   );
 };

@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { HomeProvider, useHome } from '~/src/contexts/Home';
+import { HomeProvider } from '~/src/contexts/Home';
 import { withProvider } from '~/src/utils/ProviderHOC';
 import Footer from '../Public/Footer';
 import HomeSearchBar from './HomeSearchBar';
 import HomeTokenList from './HomeTokenList';
 
 const Home: React.FC = () => {
-  const {} = useHome();
-
   return (
     <HomeContainer>
       <div className="pt-20 pb-10 bg-white">
@@ -17,7 +15,7 @@ const Home: React.FC = () => {
           <HomeHeaderContainer className="lg:text-center flex items-center flex-col	">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide">breadtracker.xyz</h2>
             <TypewriterHeaderWrapper>
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <p className="mt-2 text-3xl leading-normal font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 A lightweight way to track that bread. 🍞
               </p>
             </TypewriterHeaderWrapper>

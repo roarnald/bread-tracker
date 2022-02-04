@@ -82,11 +82,11 @@ const HomeTokenList: React.FC = () => {
               <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600" key={key}>
                 <td className="p-4 capitalize sticky left-0 bg-white">{key.replaceAll('-', ' ')}</td>
                 <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd)}</td>
-                <td className="p-4">{formatNumber(usd_market_cap)}</td>
+                <td className="p-4">{formatNumber(usd_market_cap, true)}</td>
                 <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd_24h_change)} %</td>
                 <td className="p-4 pr-0">
                   <div className="flex justify-between">
-                    <div>{formatNumber(usd_24h_vol)}</div>
+                    <div>{formatNumber(usd_24h_vol, true)}</div>
                     {showDelete && (
                       <div className="ml-3 cursor-pointer" onClick={handleDelete(key)}>
                         <svg

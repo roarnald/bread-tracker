@@ -448,6 +448,14 @@ img, video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: .75rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -521,6 +529,10 @@ img, video {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-loose {
+  line-height: 2;
 }
 
 .tracking-wide {

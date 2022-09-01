@@ -38,7 +38,6 @@ const HomeTokenList: React.FC = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      console.log('hello');
       fetchUserCoins();
     }, 5000);
 

@@ -98,6 +98,15 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
   };
 
   setPinnedToken = (token: string) => {
+    const { pinnedToken } = this.state;
+
+    if (token === pinnedToken) {
+      this.setState({ pinnedToken: null });
+      localStorage.removeItem('pinned');
+      document.title = 'Bread Tracker';
+      return;
+    }
+
     this.setState({ pinnedToken: token });
     localStorage.setItem('pinned', token);
     this.setTitleAsPinnedToken(token);

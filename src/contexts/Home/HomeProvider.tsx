@@ -1,8 +1,9 @@
 import React from 'react';
-
 import { getCoinList } from '~/src/api/Coins';
 import { getSimplePrice } from '~/src/api/Simple';
-import { HomeContext, IHomeContext, initValue, STORAGE_KEY } from './HomeContext';
+import { formatNumber } from '~/src/utils/Common';
+
+import { initValue, HomeContext, IHomeContext, STORAGE_KEY } from './HomeContext';
 
 const BASIC_COIN_LIST = 'bitcoin,ethereum,cardano,';
 
@@ -33,16 +34,18 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
 
   fetchCoinList = async () => {
     try {
-      this.setState({ isFetching: true });
+      this.setState({ isFetchingTokenList: true });
       const coinList = await getCoinList();
       this.setState({ coinList, filteredCoinList: coinList });
     } finally {
-      this.setState({ isFetching: false });
+      this.setState({ isFetchingTokenList: false });
     }
   };
 
   fetchUserCoins = async () => {
     try {
+      this.setState({ isFetchingTokenPrice: true });
+
       const userCoinList = await getSimplePrice({
         ids: localStorage.getItem(STORAGE_KEY) || '',
         vs_currencies: 'usd',
@@ -51,11 +54,14 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
         include_24hr_change: true,
         include_last_updated_at: true,
       });
+
       this.setState({ userCoinList });
+
+      this.setTitleAsPinnedToken();
     } finally {
       const { isFirstLoad } = this.state;
 
-      this.setState({ isFetching: false });
+      this.setState({ isFetchingTokenPrice: false });
 
       if (isFirstLoad) {
         this.setState({ isFirstLoad: false });
@@ -63,7 +69,8 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
     }
   };
 
-  tempToggleLoading = () => this.setState(({ isFetching }) => ({ isFetching: !isFetching }));
+  tempToggleLoading = () =>
+    this.setState(({ isFetchingTokenList: isFetching }) => ({ isFetchingTokenList: !isFetching }));
 
   filterCoinList = (filterKey: string) => {
     const filterKeyLower = filterKey.toLowerCase();
@@ -90,11 +97,30 @@ export class HomeProvider extends React.PureComponent<IHomeProviderProps, IHomeP
     localStorage.setItem(STORAGE_KEY, currentSavedList?.replace(`${id},`, '') || '');
   };
 
+  setPinnedToken = (token: string) => {
+    this.setState({ pinnedToken: token });
+    localStorage.setItem('pinned', token);
+    this.setTitleAsPinnedToken(token);
+  };
+
+  setTitleAsPinnedToken = (token?: string) => {
+    const { userCoinList, pinnedToken } = this.state;
+    const targetToken = token || pinnedToken;
+
+    if (!targetToken) {
+      return;
+    }
+
+    const coinTitle = targetToken.charAt(0).toUpperCase() + targetToken.slice(1);
+    document.title = `${formatNumber(userCoinList[targetToken || ''].usd)} - ${coinTitle}`;
+  };
+
   actions: PickByType<IHomeContext, Function> = {
     fetchCoinList: this.fetchCoinList,
     fetchUserCoins: this.fetchUserCoins,
     filterCoinList: this.filterCoinList,
     handleDelete: this.handleDelete,
+    setPinnedToken: this.setPinnedToken,
   };
 
   render() {

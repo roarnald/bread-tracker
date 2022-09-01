@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { HomeProvider } from '~/src/contexts/Home';
 import { withProvider } from '~/src/utils/ProviderHOC';
+
 import Footer from '../Public/Footer';
 import HomeSearchBar from './HomeSearchBar';
 import HomeTokenList from './HomeTokenList';

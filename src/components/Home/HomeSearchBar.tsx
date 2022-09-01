@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useVirtual } from 'react-virtual';
 import styled, { css } from 'styled-components';
-
 import { ICoinItem } from '~/src/api/Coins';
-import { STORAGE_KEY } from '~/src/contexts/Home/HomeContext';
 import { useHome } from '~/src/contexts/Home';
+import { STORAGE_KEY } from '~/src/contexts/Home/HomeContext';
 
 const HomeSearchBar: React.FC = () => {
   const { filteredCoinList, userCoinList, filterCoinList, fetchUserCoins } = useHome();
 
   const [searchFocused, setSearchFocused] = useState(false);
 
-  const parentRef = React.useRef<HTMLDivElement>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
 
   const { totalSize, virtualItems } = useVirtual({
     size: filteredCoinList.length,

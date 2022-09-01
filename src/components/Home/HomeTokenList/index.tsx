@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
-
 import { useHome } from '~/src/contexts/Home';
 import { formatNumber } from '~/src/utils/Common';
-import Loading from '../Public/Loading';
+
+import Loading from '../../Public/Loading';
+import PinTitleButton from './PinTitleButton';
 
 const getChangeIndicator = (change: number) => {
   if (change < 0) {
@@ -17,7 +18,7 @@ const getChangeIndicator = (change: number) => {
 };
 
 const HomeTokenList: React.FC = () => {
-  const { isFirstLoad, isFetching, userCoinList, handleDelete } = useHome();
+  const { isFirstLoad, isFetchingTokenPrice, userCoinList, handleDelete, fetchUserCoins } = useHome();
 
   const tableRef = useRef<HTMLDivElement>(null);
   const [showDelete, setShowDelete] = useState(false);
@@ -35,11 +36,21 @@ const HomeTokenList: React.FC = () => {
     }
   }, [showDelete]);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      console.log('hello');
+      fetchUserCoins();
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <HomeTokenListContainer className="overflow-auto" ref={tableRef}>
       <table className="table-auto min-w-full border-separate">
         <thead>
           <tr className="text-left text-xs sticky top-0 z-10 bg-white">
+            <th className="p-4 pb-2 sticky left-0 border-b-2 bg-white">Pin to title</th>
             <th className="p-4 pb-2 w-80 sticky left-0 border-b-2 bg-white">Name</th>
             <th className="p-4 pb-2 border-b-2">Price</th>
             <th className="p-4 pb-2 border-b-2">Market Cap</th>
@@ -79,7 +90,14 @@ const HomeTokenList: React.FC = () => {
 
           {sortedUserCoinList.length > 0 ? (
             sortedUserCoinList.map(([key, { usd, usd_market_cap, usd_24h_change, usd_24h_vol }]) => (
-              <DataTableRow $isLoading={isFetching} className="border-b-2 border-gray-50 text-gray-600" key={key}>
+              <DataTableRow
+                $isLoading={isFetchingTokenPrice}
+                className="border-b-2 border-gray-50 text-gray-600"
+                key={key}
+              >
+                <td className="p-3 p-4 pr-0">
+                  <PinTitleButton token={key} />
+                </td>
                 <td className="p-4 capitalize sticky left-0 bg-white">{key.replaceAll('-', ' ')}</td>
                 <td className={`p-4 ${getChangeIndicator(usd_24h_change)}`}>{formatNumber(usd)}</td>
                 <td className="p-4">{formatNumber(usd_market_cap, true)}</td>

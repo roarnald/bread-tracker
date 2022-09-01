@@ -578,33 +578,46 @@ const Home = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HomeContainer, {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "pt-20 pb-10 bg-white",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HomeHeaderContainer, {
-                            className: "lg:text-center flex items-center flex-col ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "pt-20 pb-10 bg-white",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
                             children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "text-base text-indigo-600 font-semibold tracking-wide",
-                                    children: "breadtracker.xyz"
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HomeHeaderContainer, {
+                                    className: "lg:text-center flex items-center flex-col ",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                            className: "text-base text-indigo-600 font-semibold tracking-wide",
+                                            children: "breadtracker.xyz"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Home/index.tsx",
+                                            lineNumber: 17,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(TypewriterHeaderWrapper, {
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "mt-2 text-3xl leading-normal font-extrabold tracking-tight text-gray-900 sm:text-4xl leading-loose",
+                                                children: "A lightweight way to track that bread. \uD83C\uDF5E"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Home/index.tsx",
+                                                lineNumber: 19,
+                                                columnNumber: 17
+                                            }, undefined)
+                                        }, void 0, false, {
+                                            fileName: "src/components/Home/index.tsx",
+                                            lineNumber: 18,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "src/components/Home/index.tsx",
                                     lineNumber: 16,
                                     columnNumber: 13
                                 }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(TypewriterHeaderWrapper, {
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "mt-2 text-3xl leading-normal font-extrabold tracking-tight text-gray-900 sm:text-4xl leading-loose",
-                                        children: "A lightweight way to track that bread. \uD83C\uDF5E"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Home/index.tsx",
-                                        lineNumber: 18,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeSearchBarDefault.default), {}, void 0, false, {
                                     fileName: "src/components/Home/index.tsx",
-                                    lineNumber: 17,
+                                    lineNumber: 25,
                                     columnNumber: 13
                                 }, undefined)
                             ]
@@ -612,31 +625,26 @@ const Home = ()=>{
                             fileName: "src/components/Home/index.tsx",
                             lineNumber: 15,
                             columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeSearchBarDefault.default), {}, void 0, false, {
-                            fileName: "src/components/Home/index.tsx",
-                            lineNumber: 24,
-                            columnNumber: 11
                         }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Home/index.tsx",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+                    }, void 0, false, {
+                        fileName: "src/components/Home/index.tsx",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeTokenListDefault.default), {}, void 0, false, {
+                        fileName: "src/components/Home/index.tsx",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Home/index.tsx",
                 lineNumber: 13,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeTokenListDefault.default), {}, void 0, false, {
-                fileName: "src/components/Home/index.tsx",
-                lineNumber: 28,
-                columnNumber: 7
-            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/components/Home/index.tsx",
-                lineNumber: 29,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined)
         ]
@@ -648,9 +656,26 @@ const Home = ()=>{
 };
 _c = Home;
 exports.default = _c1 = (0, _providerHOC.withProvider)((0, _home.HomeProvider), Home);
-const HomeContainer = (0, _styledComponentsDefault.default).div``;
+const HomeContainer = (0, _styledComponentsDefault.default).div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+
+  @media screen and (max-width: 1024px) {
+    > div > div {
+      padding: 8px 0;
+    }
+  }
+`;
 _c2 = HomeContainer;
 const HomeHeaderContainer = (0, _styledComponentsDefault.default).div`
+  @media screen and (max-width: 1024px) {
+    h2 {
+      font-size: 14px;
+    }
+  }
   @media screen and (max-width: 1024px) {
     align-items: flex-start;
   }
@@ -658,6 +683,13 @@ const HomeHeaderContainer = (0, _styledComponentsDefault.default).div`
 _c3 = HomeHeaderContainer;
 const TypewriterHeaderWrapper = (0, _styledComponentsDefault.default).span`
   height: max-content;
+
+  @media screen and (max-width: 1024px) {
+    p {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
 
   @media screen and (min-width: 1024px) {
     p {
@@ -2926,7 +2958,7 @@ class HomeProvider extends (0, _reactDefault.default).PureComponent {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/api/Coins":"8Itke","~/src/api/Simple":"i974s","./HomeContext":"8jHlc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/utils/Common":"1W86E"}],"8Itke":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/api/Coins":"8Itke","~/src/api/Simple":"i974s","~/src/utils/Common":"1W86E","./HomeContext":"8jHlc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8Itke":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getCoinList", ()=>getCoinList);
@@ -4501,9 +4533,6 @@ const FooterContainer = (0, _styledComponentsDefault.default).footer`
   width: 100%;
   text-align: center;
 
-  position: absolute;
-  bottom: 0;
-
   padding: 18px;
   min-width: max-content;
 `;
@@ -4666,7 +4695,7 @@ $RefreshReg$(_c4, "DropdownVirtualItem");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-virtual":"bJyum","styled-components":"1U3k6","~/src/contexts/Home/HomeContext":"8jHlc","~/src/contexts/Home":"kN0Rb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bJyum":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-virtual":"bJyum","styled-components":"1U3k6","~/src/contexts/Home":"kN0Rb","~/src/contexts/Home/HomeContext":"8jHlc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bJyum":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "defaultRangeExtractor", ()=>defaultRangeExtractor);
@@ -5507,7 +5536,6 @@ exports.default = HomeTokenList;
 const HomeTokenListContainer = (0, _styledComponentsDefault.default).div`
   width: 90vw;
   max-width: 900px;
-  max-height: calc(100vh - 380px);
   margin: auto;
 
   overflow: auto;
@@ -5565,7 +5593,7 @@ $RefreshReg$(_c2, "DataTableRow");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","~/src/contexts/Home":"kN0Rb","~/src/utils/Common":"1W86E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../Public/Loading":"1XRPz","./PinTitleButton":"k4SfF"}],"1XRPz":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","~/src/contexts/Home":"kN0Rb","~/src/utils/Common":"1W86E","../../Public/Loading":"1XRPz","./PinTitleButton":"k4SfF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1XRPz":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$17ec = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -5826,6 +5854,6 @@ $RefreshReg$(_c2, "PinTitleButtonContainer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/contexts/Home":"kN0Rb"}]},["1xC6H","8Ewuh"], null, "parcelRequire4e1e")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","~/src/contexts/Home":"kN0Rb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","8Ewuh"], null, "parcelRequire4e1e")
 
 //# sourceMappingURL=Home.0481f49a.js.map

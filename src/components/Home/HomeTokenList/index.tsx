@@ -146,7 +146,6 @@ export default HomeTokenList;
 const HomeTokenListContainer = styled.div`
   width: 90vw;
   max-width: 900px;
-  max-height: calc(100vh - 380px);
   margin: auto;
 
   overflow: auto;

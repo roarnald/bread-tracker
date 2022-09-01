@@ -28,9 +28,6 @@ const FooterContainer = styled.footer`
   width: 100%;
   text-align: center;
 
-  position: absolute;
-  bottom: 0;
-
   padding: 18px;
   min-width: max-content;
 `;

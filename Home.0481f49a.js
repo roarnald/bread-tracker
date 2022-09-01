@@ -2880,6 +2880,15 @@ class HomeProvider extends (0, _reactDefault.default).PureComponent {
             localStorage.setItem((0, _homeContext.STORAGE_KEY), currentSavedList?.replace(`${id},`, "") || "");
         };
     setPinnedToken = (token)=>{
+        const { pinnedToken  } = this.state;
+        if (token === pinnedToken) {
+            this.setState({
+                pinnedToken: null
+            });
+            localStorage.removeItem("pinned");
+            document.title = "Bread Tracker";
+            return;
+        }
         this.setState({
             pinnedToken: token
         });
@@ -2906,7 +2915,7 @@ class HomeProvider extends (0, _reactDefault.default).PureComponent {
             ...this.props
         }, void 0, false, {
             fileName: "src/contexts/Home/HomeProvider.tsx",
-            lineNumber: 127,
+            lineNumber: 136,
             columnNumber: 12
         }, this);
     }
@@ -5201,7 +5210,6 @@ const HomeTokenList = ()=>{
     ]);
     (0, _react.useEffect)(()=>{
         const intervalId = setInterval(()=>{
-            console.log("hello");
             fetchUserCoins();
         }, 5000);
         return ()=>clearInterval(intervalId);
@@ -5221,7 +5229,7 @@ const HomeTokenList = ()=>{
                                 children: "Pin to title"
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -5229,7 +5237,7 @@ const HomeTokenList = ()=>{
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 54,
+                                lineNumber: 53,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -5237,7 +5245,7 @@ const HomeTokenList = ()=>{
                                 children: "Price"
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 55,
+                                lineNumber: 54,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -5245,7 +5253,7 @@ const HomeTokenList = ()=>{
                                 children: "Market Cap"
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 56,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -5253,7 +5261,7 @@ const HomeTokenList = ()=>{
                                 children: "24h Change"
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 57,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
@@ -5265,7 +5273,7 @@ const HomeTokenList = ()=>{
                                             children: "24h Volume"
                                         }, void 0, false, {
                                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 59,
                                             columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5283,39 +5291,39 @@ const HomeTokenList = ()=>{
                                                     d: "M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                                    lineNumber: 69,
+                                                    lineNumber: 68,
                                                     columnNumber: 21
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                                lineNumber: 62,
+                                                lineNumber: 61,
                                                 columnNumber: 19
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 60,
                                             columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 58,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 58,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                        lineNumber: 52,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                    lineNumber: 51,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -5327,17 +5335,17 @@ const HomeTokenList = ()=>{
                                     type: "card"
                                 }, void 0, false, {
                                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 85,
                                     columnNumber: 17
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 85,
+                                lineNumber: 84,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                            lineNumber: 84,
+                            lineNumber: 83,
                             columnNumber: 13
                         }, undefined),
                         sortedUserCoinList.length > 0 ? sortedUserCoinList.map(([key, { usd , usd_market_cap , usd_24h_change , usd_24h_vol  }])=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(DataTableRow, {
@@ -5350,12 +5358,12 @@ const HomeTokenList = ()=>{
                                             token: key
                                         }, void 0, false, {
                                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 98,
                                             columnNumber: 19
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 97,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -5363,7 +5371,7 @@ const HomeTokenList = ()=>{
                                         children: key.replaceAll("-", " ")
                                     }, void 0, false, {
                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 100,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -5371,7 +5379,7 @@ const HomeTokenList = ()=>{
                                         children: (0, _common.formatNumber)(usd)
                                     }, void 0, false, {
                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 101,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -5379,7 +5387,7 @@ const HomeTokenList = ()=>{
                                         children: (0, _common.formatNumber)(usd_market_cap, true)
                                     }, void 0, false, {
                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 102,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -5390,7 +5398,7 @@ const HomeTokenList = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 103,
                                         columnNumber: 17
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -5402,7 +5410,7 @@ const HomeTokenList = ()=>{
                                                     children: (0, _common.formatNumber)(usd_24h_vol, true)
                                                 }, void 0, false, {
                                                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 106,
                                                     columnNumber: 21
                                                 }, undefined),
                                                 showDelete && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5421,34 +5429,34 @@ const HomeTokenList = ()=>{
                                                             d: "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                                                         }, void 0, false, {
                                                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                                            lineNumber: 117,
+                                                            lineNumber: 116,
                                                             columnNumber: 27
                                                         }, undefined)
                                                     }, void 0, false, {
                                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 109,
                                                         columnNumber: 25
                                                     }, undefined)
                                                 }, void 0, false, {
                                                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                                    lineNumber: 109,
+                                                    lineNumber: 108,
                                                     columnNumber: 23
                                                 }, undefined)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                            lineNumber: 106,
+                                            lineNumber: 105,
                                             columnNumber: 19
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 104,
                                         columnNumber: 17
                                     }, undefined)
                                 ]
                             }, key, true, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 93,
+                                lineNumber: 92,
                                 columnNumber: 15
                             }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -5458,34 +5466,34 @@ const HomeTokenList = ()=>{
                                     children: "Whoops! You deleted everything. Search up a new coin to add to list!"
                                 }, void 0, false, {
                                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 132,
                                     columnNumber: 17
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Home/HomeTokenList/index.tsx",
-                                lineNumber: 132,
+                                lineNumber: 131,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Home/HomeTokenList/index.tsx",
-                            lineNumber: 131,
+                            lineNumber: 130,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Home/HomeTokenList/index.tsx",
-                    lineNumber: 82,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Home/HomeTokenList/index.tsx",
-            lineNumber: 50,
+            lineNumber: 49,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Home/HomeTokenList/index.tsx",
-        lineNumber: 49,
+        lineNumber: 48,
         columnNumber: 5
     }, undefined);
 };

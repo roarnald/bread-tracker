@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <HomeHeaderContainer className="lg:text-center flex items-center flex-col	">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide">breadtracker.xyz</h2>
             <TypewriterHeaderWrapper>
-              <p className="mt-2 text-3xl leading-normal font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <p className="mt-2 text-3xl leading-normal font-extrabold tracking-tight text-gray-900 sm:text-4xl leading-loose">
                 A lightweight way to track that bread. 🍞
               </p>
             </TypewriterHeaderWrapper>
@@ -42,6 +42,8 @@ const HomeHeaderContainer = styled.div`
 `;
 
 const TypewriterHeaderWrapper = styled.span`
+  height: max-content;
+
   @media screen and (min-width: 1024px) {
     p {
       width: 100%;

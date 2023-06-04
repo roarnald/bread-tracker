@@ -2915,7 +2915,7 @@ _c1 = Home;
 const Application = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
-                basename: "/",
+                basename: "/bread-tracker",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                         path: "/",
@@ -2924,29 +2924,29 @@ const Application = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRunt
                             element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Home, {}, void 0, false, void 0, void 0)
                         }, void 0, false, {
                             fileName: "src/components/index.tsx",
-                            lineNumber: 18,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/index.tsx",
-                        lineNumber: 17,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/index.tsx",
-                    lineNumber: 16,
+                    lineNumber: 15,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/index.tsx",
-                lineNumber: 15,
+                lineNumber: 14,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactToastify.ToastContainer), {
                 position: "top-center"
             }, void 0, false, {
                 fileName: "src/components/index.tsx",
-                lineNumber: 23,
+                lineNumber: 22,
                 columnNumber: 5
             }, undefined)
         ]
@@ -2954,7 +2954,7 @@ const Application = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRunt
 _c2 = Application;
 (0, _reactDom.render)(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Application, {}, void 0, false, {
     fileName: "src/components/index.tsx",
-    lineNumber: 27,
+    lineNumber: 26,
     columnNumber: 8
 }, undefined), document.getElementById("root"));
 var _c, _c1, _c2;

@@ -5,14 +5,13 @@ import React, { FC } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-
 import lazy from '~/src/utils/lazy';
 
 const Home = lazy(() => import('./Home'));
 
 const Application: FC = () => (
   <>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/bread-tracker">
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
